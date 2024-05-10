@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #008080;
+            font: normal 15pt;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+
+        }
+
+        h1 {
+            color:  #008080;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 35px;
+            width: 500px;
+            margin: auto;
+            margin-top: 100px;
+
+        }
+
+        div > p {
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 4px;
+            border: 1px solid black;
+            border-radius: 1px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            
+        }
+
+        #botao:hover {
+            background-color: #00adad;
+        }
+
+
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>CONTAGEM!!</p>
+        </header>
+        <div>
+            <p>Ínicio:
+                <input type="number" name="inicio" id="ini">
+            </p>
+            <p>Fim:
+                <input type="number" name="fim" id="fim">
+            </p>
+            <p>Salto:
+                <input type="number" name="salto" id="sal">
+            </p>
+            <p>
+                <input type="button" value="Contar" id="botao" onclick="contagem()">
+            </p>
+        </div>
+        <div id="res"></div>
+    </section>
+    <script>
+        function contagem() {
+            let c = document.getElementById('ini')
+            let x = document.getElementById('fim')
+            let y = document.getElementById('sal')
+            let res = document.getElementById('res')
+
+            if (c.value.length == 0 || x.value.length == 0 || y.value.length == 0) {
+                window.alert('[ERRO] Faltam Dados!')
+        }   else {
+                let i = Number(c.value)
+                let f = Number(x.value)
+                let s = Number(y.value)
+                if (i < f) {
+                    for(let c = i; c <= f; c += s) {
+                    res.innerHTML += `,${c} `
+                    }
+            }   else {
+                    for(let c = i; c >= f; c -= s) {
+                        res.innerHTML += `,${c} `
+                    }
+                }
+                    
+            }
+        }
+        </script>
+</body>
+</html>

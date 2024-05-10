@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          #container {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            background-color: gold;
+            height: 96vh;
+            padding: 10px;
+            position:relative;
+        }
+
+        #conteudo {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            background-color: rgba(0, 128, 128, 0.301);
+            height: 200px;
+            width: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* outra forma de centralizar 
+
+        #container
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        */
+
+        #ctr {
+            background-color: lightblue;
+            height: 400px;
+            width: 400px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        #ctd {
+            background-color: lightcoral;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+    <div id="ctr">
+        <div id="ctd">
+
+        </div>
+    </div>
+
+    
+</body>
+</html>

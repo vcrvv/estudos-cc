@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #008080;
+            font: normal 15pt;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+
+        }
+
+        h1 {
+            color:  #008080;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 35px;
+            width: 500px;
+            margin: auto;
+            margin-top: 100px;
+
+        }
+
+        div > p {
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 4px;
+            border: 1px solid black;
+            border-radius: 1px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            
+        }
+
+        #botao:hover {
+            background-color: #00adad;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Tabuada!!</p>
+        </header>
+        <div>
+            <p>
+                Número: <input type="number" name="num" id="txtn">
+                <input type="button" value="Gerar Tabuada" onclick="tabuada()">
+            </p>
+        </div>
+        <div>
+            <select name="tabuada" id="seltab" size="10"></select>
+        </div>
+    </section>
+    <script>
+        function tabuada() {
+            let num = document.getElementById('txtn')
+            let tab = document.getElementById('seltab')
+            if (num.value.length == 0) {
+                window.alert('Por Favor, Digite um Número.')
+            } else {
+                let n = Number(num.value)
+                let c = 1
+                tab.innerHTML = ''
+                while (c <= 10) {
+                    let item = document.createElement('option')
+                    item.text = `${n} x ${c} = ${n*c}`
+                    tab.appendChild(item)
+                    c++
+                }
+            }
+        }
+        </script>
+</body>
+</html>

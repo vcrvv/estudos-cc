@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { 
+            height: 100vh;
+            background-color: black;
+            background-image: url(imagens/wallpaper002.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+
+           /*shorthand
+            color > image > position > repeat > [size] > attachement.
+
+            background: black, url(), center center, no-repeat, fixed;
+
+            */
+        }
+
+        main {
+            background-color: white;
+            width: 400px;
+            padding: 10px;
+            margin: auto;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        #container {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            background-color: gold;
+            height: 96vh;
+            padding: 10px;
+            position:relative;
+        }
+
+        #conteudo {
+            background-image: url(imagens/target001.png);
+            background-size: 100% 100%;
+            background-color: rgba(0, 128, 128, 0.301);
+            height: 200px;
+            width: 400px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* outra forma de centralizar 
+
+        #container
+            display: flex
+            justify-content; center
+            align-items: center
+        */    
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Teste de Imagem</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur consequuntur ipsam fugiat quia labore autem, molestias inventore accusantium non quos dolores eius sapiente corrupti suscipit illum, vitae, quis adipisci alias!
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae praesentium assumenda laborum tenetur ratione sapiente facere sit fugiat voluptatibus nobis cum qui doloremque, quae adipisci vero hic? Totam, quia vel.
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium impedit labore eligendi. Repellendus nulla sequi in vel corporis! Soluta et, tenetur pariatur commodi quos ratione? Incidunt minus voluptate consectetur iusto!
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium impedit labore eligendi. Repellendus nulla sequi in vel corporis! Soluta et, tenetur pariatur commodi quos ratione? Incidunt minus voluptate consectetur iusto!
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium impedit labore eligendi. Repellendus nulla sequi in vel corporis! Soluta et, tenetur pariatur commodi quos ratione? Incidunt minus voluptate consectetur iusto!
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium impedit labore eligendi. Repellendus nulla sequi in vel corporis! Soluta et, tenetur pariatur commodi quos ratione? Incidunt minus voluptate consectetur iusto!
+        </p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium impedit labore eligendi. Repellendus nulla sequi in vel corporis! Soluta et, tenetur pariatur commodi quos ratione? Incidunt minus voluptate consectetur iusto!
+        </p>
+
+    </main>
+    <section id="container">
+        <article id="conteudo">
+
+        </article>
+    </section>
+    
+</body>
+</html>

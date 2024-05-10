@@ -1,0 +1,26 @@
+A programação orientada a objetos (POO) é um paradigma de programação que se baseia na concepção de "objetos" como entidades que possuem características (dados) e comportamentos (métodos) relacionados. Python é uma linguagem de programação que suporta totalmente a programação orientada a objetos e fornece recursos poderosos para sua implementação. Abaixo, vou fornecer um resumo básico sobre POO com Python:
+
+Classes e Objetos:
+
+Uma classe é um modelo ou plano para criar objetos. Ela define os atributos (dados) e métodos (comportamentos) que os objetos de uma classe específica terão.
+Um objeto é uma instância de uma classe, ou seja, é uma entidade concreta criada com base na classe. Cada objeto possui seu próprio conjunto de atributos e métodos.
+Encapsulamento:
+
+O encapsulamento é o conceito de agrupar dados (atributos) e métodos (comportamentos) relacionados em uma única unidade, chamada classe.
+Em Python, a encapsulação é alcançada por meio de modificadores de acesso como public, protected e private, embora o conceito de acesso privado não seja tão rígido quanto em algumas outras linguagens.
+Herança:
+
+Herança é um mecanismo pelo qual uma classe pode herdar atributos e métodos de outra classe, conhecida como classe pai ou superclasse.
+Em Python, a herança é implementada usando a sintaxe class Filha(Pai):, onde Filha é a classe derivada (subclasse) e Pai é a classe base (superclasse).
+Polimorfismo:
+
+Polimorfismo é a capacidade de uma classe fornecer uma implementação diferente de um método que foi herdado de sua classe pai. Isso permite que métodos com o mesmo nome se comportem de maneira diferente em diferentes classes.
+Em Python, o polimorfismo é alcançado através do mecanismo de sobrescrita de métodos.
+Métodos Especiais (Mágicos):
+
+Python fornece métodos especiais, também conhecidos como métodos mágicos ou dunder methods (métodos com duplo sublinhado), que começam e terminam com __. Esses métodos são utilizados para realizar operações especiais em objetos.
+Exemplos incluem __init__ para inicialização de objetos, __str__ para representação de string de objetos, __add__ para sobrecarregar o operador +, entre outros.
+Módulos e Pacotes:
+
+Em Python, é comum organizar classes relacionadas em módulos e pacotes. Um módulo é um arquivo contendo definições e instruções Python, enquanto um pacote é uma coleção de módulos organizados em um diretório.
+Em resumo, a programação orientada a objetos em Python permite modelar problemas complexos de forma mais eficiente, fornecendo uma estrutura organizada e reutilizável para o desenvolvimento de software. Ela promove conceitos como encapsulamento, herança, polimorfismo e facilita a criação de código limpo, modular e fácil de manter.

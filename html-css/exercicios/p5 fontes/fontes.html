@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fontes</title>
+    <style> 
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Teko:wght@300..700&display=swap');
+        @font-face {
+            font-family:'absolutempire' ;
+            src: url('aAbsoluteEmpire.otf') format('opentype'), url('aAbsoluteEmpire.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            /*tipos de format
+             opentype (otf)
+             trutype (ttf)
+             embedded-opentype
+             truetype-aat (apple Advanced Typpgraphy)
+             svg */
+        }
+
+     body{
+       font-family: Arial, Helvetica, sans-serif ;
+       /*MEDIDAS ABSOLUTAS:cm, mm, in, px, pt, pc
+       MEDIDAS RELATIVAS:em, ex, rem, vw, vh, %
+       16px geralmente = 1em */
+       font-size: 1em;
+       font-weight: normal;
+     } 
+       
+     h1 {
+        /*shorthand
+        -font-style > font-weight > font-size > font-family */
+        font: italic bolder 2em 'absolutempire',sans-serif ;
+        
+     }
+
+     h2 {
+        font-family: Cinzel;
+     } 
+
+     p {
+        text-indent: 20px;
+     }
+     
+    </style>
+</head>
+</head>
+<body>
+    <h1 style="text-align: center;">Fontes</h1>
+    
+    <h2>Texto</h2>
+       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis cumque, nulla architecto soluta impedit doloremque eos? Similique, pariatur.</p>
+    <h2>Texto</h2>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid impedit laudantium deleniti necessitatibus sit, nemo quidem, nobis cum ut repellendus.</p>
+    <h2>Texto</h2>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur architecto rem at? Quo quae repellendus, maiores culpa voluptatibus pariatur reprehenderit deserunt at, doloribus eveniet id magni perspiciatis nostrum reiciendis? Eveniet?</p>
+</body>
+</html>

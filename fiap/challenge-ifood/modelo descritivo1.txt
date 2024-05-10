@@ -1,0 +1,37 @@
+Título: Sistema de Gerenciamento de Tarefas
+
+---------------------------------------------------------------------------------------------------------
+Objetivo:
+O Sistema de Gerenciamento de Tarefas visa auxiliar indivíduos e equipes na organização e acompanhamento de suas tarefas diárias, melhorando a produtividade e a eficiência.
+
+---------------------------------------------------------------------------------------------------------
+Funcionalidades:
+Cadastro de usuários: Permite que os usuários criem suas contas fornecendo informações como nome, email e senha.
+
+Criação de tarefas: Permite que os usuários criem novas tarefas especificando título, descrição, data de vencimento e prioridade.
+
+Atribuição de tarefas: Os usuários podem atribuir tarefas a si mesmos ou a outros membros da equipe.
+
+Dashboard: Apresenta uma visão geral das tarefas pendentes, concluídas e atrasadas.
+
+Notificações: Envia notificações por email ou no próprio sistema sobre novas tarefas atribuídas, prazos próximos, etc.
+
+Compartilhamento de tarefas: Permite que os usuários compartilhem tarefas com outros membros da equipe.
+
+Comentários: Possibilita que os usuários deixem comentários nas tarefas para discussões e esclarecimentos adicionais.
+
+---------------------------------------------------------------------------------------------------------
+Público-alvo:
+Profissionais, equipes e empresas que buscam uma solução eficiente para gerenciar suas tarefas diárias.
+
+---------------------------------------------------------------------------------------------------------
+Tecnologias Utilizadas:
+Frontend: HTML5, CSS3, JavaScript (ReactJS)
+Backend: Node.js
+Banco de Dados: MongoDB
+Serviço de Email: SendGrid
+
+---------------------------------------------------------------------------------------------------------
+Arquitetura:
+A aplicação seguirá uma arquitetura cliente-servidor, onde o frontend será construído utilizando a biblioteca ReactJS, comunicando-se com o backend em Node.js por meio de requisições HTTP. O banco de dados MongoDB será utilizado para armazenar as informações das tarefas e dos usuários.
+

@@ -1,0 +1,82 @@
+body {
+    margin: 0px;
+
+}
+
+:root {
+    --cor1: #157979;
+}
+
+main {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--cor1);
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 10px;
+    width: 350px;
+    height: 350px;
+
+    background-color: #ffffff;
+}
+
+#container-msgs {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border-radius: 10px;
+    width: 500px;
+    height: fit-content;
+    background-color: #ffffff;
+}
+
+
+form {
+    text-align: center;
+}
+
+#form-msgs {
+    text-align: justify;
+}
+
+#caixa {
+    width: 450px;
+    height: 300px;
+}
+
+
+.formularios {
+    margin: 10px;
+}
+
+.input {
+    width: 200px;
+    padding: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.466);
+    border-radius: 5px;
+}
+
+.botao {
+    width: 80px;
+    color: white;
+    margin: 2px;
+    padding: 7px;
+    background-color: var(--cor1);
+    border-radius: 6px;
+    border: none;
+}
+
+
+
+.link {
+    color: var(--cor1);
+}

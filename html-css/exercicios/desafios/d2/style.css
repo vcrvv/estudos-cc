@@ -1,0 +1,115 @@
+
+body {
+    overflow-y: scroll;
+    padding: 0px;
+    margin: 0px;
+    background-color: #E8E5C3;
+}
+
+header {
+    background-image: linear-gradient(to top, #063916, #29b16b);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    margin: 0px;
+
+}
+
+header > p {
+    color: rgb(221, 221, 221);
+    padding: 10px;
+}
+
+nav {
+    border-radius: 5px;
+    padding: 0px;
+    width: fit-content;
+    text-align: left;
+}
+
+a   {
+    color: #49d68b;
+    text-decoration: none;
+    border-radius: 5px 5px 0px 0px;
+    margin: auto;
+    padding: 5px 20px 11px 20px;
+    
+}
+
+a:hover {
+    background-color: #249157b9;
+}
+
+main {
+    box-shadow: 0px 0px 9px black;
+    margin: auto;
+    padding: 10px;
+    max-width: 800px;
+    text-align: justify;
+    background-color: white;
+    
+}
+
+img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.centro {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 25%
+}
+ 
+
+div.video {
+    background-color: var(--cor5);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+h2 {
+    color: #0E6434;
+}
+
+h3 {
+    color: #0E6434;
+}
+
+h4 {
+    border-radius: 7px 7px 0px 0;
+    padding: 9px;
+    margin: 17px 0px 0px 0px;
+    color: white;
+    background-color: #249156;
+}
+
+p {
+    text-indent: 15px;
+}
+
+article {
+    font-size: smaller;
+    padding: 5px;
+    border-radius: 0px 0px 7px 7px;
+    background-color: hwb(147 59% 13% / 0.692);
+}
+
+footer {
+    color: #ffffff;
+    background-color: #063916;
+    margin: 0px auto 0px auto;
+    text-align: center;
+}

@@ -1,0 +1,35 @@
+* {
+    height: max-content;
+   
+}
+
+body  {
+    
+    background-image: linear-gradient(to right, #8AB0BF,#2A596B, #0E3240);
+    
+}
+
+main  {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(6, 21, 27, 0.808) ;
+    width: 600px;
+    padding: 10px;
+    margin: auto;
+
+}
+
+h1 {
+    color: #4198C2;
+    text-align: center;
+    text-shadow: 1px 1px 1px #24546bcb;
+
+}
+
+h2 {
+    color: #539EC2;
+}
+
+p  {
+    text-align: justify;
+}

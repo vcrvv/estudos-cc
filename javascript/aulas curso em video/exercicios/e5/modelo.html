@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: #008080;
+            font: normal 15pt;
+            font-family: Arial, Helvetica, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+
+        }
+
+        h1 {
+            color:  #008080;
+            margin-bottom: 30px;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 10px;
+            padding: 35px;
+            width: 500px;
+            margin: auto;
+            margin-top: 100px;
+
+        }
+
+        div > p {
+            margin-bottom: 10px;
+        }
+
+        input {
+            padding: 4px;
+            border: 1px solid black;
+            border-radius: 1px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            
+        }
+
+        #botao:hover {
+            background-color: #00adad;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <h1>Analisador de Números</h1>
+        </header>
+        <div>
+            <p>  Número (entre 1 e 100):
+                <input type="number" name="fnum" id="fnum">
+                <input type="button" value="Adicionar" onclick="adicionar()">
+                <br><select name="flista" id="flista" size="10"></select>
+                <br><input type="button" value="Finalizar" onclick="finalizar()">
+            </p>
+        </div>
+        <div id="res">
+        </div>
+    </section>
+    <script>
+        let num = document.querySelector('input#fnum')
+        let lista = document.querySelector('select#flista')
+        let res = document.querySelector('div#res')
+        let valores = []
+        
+        function isNumero(n) {
+            if (Number(n) >= 1 && Number(n) <= 100) {
+                return true
+            } else {
+                return false
+            }
+        }
+
+
+        function inLista(n, l) {
+            if (l.indexOf(Number(n)) != -1) {
+                return true
+            } else {
+                return false
+            }
+                
+        }
+
+        function adicionar() {
+            if (isNumero(num.value) && !inLista(num.value, valores)) {
+                valores.push(Number(num.value))
+                let item = document.createElement('option')
+                item.text = `Valor ${num.value} adicionado`
+                lista.appendChild(item)
+            } else {
+                window.alert('erro')
+            }
+            num.value = '' 
+            num.focus()
+        }
+
+        function finalizar() {
+            if (valores.length == 0) {
+                window.alert('erro')
+            } else {
+                let tot = valores.length
+                let maior = valores[0]
+                let menor = valores[0]
+                let soma = 0
+                let media = 0
+                for(let pos in valores) {
+                    soma += valores[pos]
+                    if (valores[pos] > maior)
+                        maior = valores[pos]
+                    if (valores[pos] < menor)
+                        menor = valores[pos]
+                }
+                media = soma / tot
+                res.innerHTML = ''
+                res.innerHTML += `<p>Ao todo, temos ${tot} números cadastrados.</p>`
+                res.innerHTML += `<p>O maior valor informado é o número ${maior}</p>`
+                res.innerHTML += `<p>O menor valor informado é o número ${menor}</p>`
+                res.innerHTML += `<p>A soma dos valores é ${soma}</p>`
+                res.innerHTML += `<p>A média é ${media}</p>`
+            }
+
+        }
+
+    </script>
+</body>
+</html>

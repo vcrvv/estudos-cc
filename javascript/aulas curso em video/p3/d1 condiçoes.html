@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+    <h1>Nacionalidades</h1>
+    Onde voce nasceu? <input type="text" id="paiss">
+    <input type="button" value="Verificar" onclick="saber()">
+    <div id="res">
+
+    </div>
+    <script>
+        function saber() {
+            var res = document.querySelector('div#res')
+            var pais = document.getElementById('paiss').value
+        }       if (pais == 'Brasil') {
+                    res.innerHTML +=  `<p>voce é brasileiro</p>`
+           }    else (pais != 'Brasil') {
+                    res.innerHTML += `<p>voce é gringo</p>`
+             }
+                
+    </script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+:root {
+    --cor0: #ffffff;
+    --cor1: #F6F8FA;
+    --cor2: #1F883D;
+    --coe3: #0969DA;
+    --cor4: #656D76;
+}
+
+
+main {
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    font-size: x-large;
+    font-weight: lighter;
+}
+
+#caixa {
+    border-radius: 7px;
+    border-width: thin;
+    border-color: #D8DEE4;
+    background-color: var(--cor1);
+    border-style: ridge;
+    margin: auto;
+    height: 225px;
+    width: 320px;
+}
+
+article {
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+
+div p {
+    font-size: smaller;
+}
+
+img {
+    width: 50px;
+}
+
+input {
+    border-radius: 6px;
+    border-color: rgba(0, 0, 0, 0.356);
+    border-width: thin;
+    width: -webkit-fill-available;
+    padding: 7px;
+}
+
+input:hover {
+    border-color: #0969DA;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    font-weight: bold;
+    border: none;
+    padding: 8px;
+    border-radius: 7px;
+    color: white;
+    background-color: var(--cor2);
+    margin-bottom: 11px;
+    margin-top: 11px;
+    width: -webkit-fill-available;
+        
+}
+
+button:hover {
+    background-color: #1c7535;
+}
+
+#caixa2 {
+    
+    border-style: solid;
+    border-color:#D8DEE4;
+    border-width: thin;
+    border-radius: 7px;
+    margin: auto;
+    width: 320px;
+
+}
+
+footer {
+    display: block;
+    color: grey;
+    text-align: center;
+    padding: 31px;
+    margin: auto;
+    font-size: smaller;
+
+}
+
+footer > a {
+    color: var(--cor4);
+    margin: 0px 7px 0px 0px
+}
+
+footer a:hover {
+    color: #0969DA;
+}
+    
+

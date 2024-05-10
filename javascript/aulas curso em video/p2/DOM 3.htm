@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 50px;
+        }
+
+        div {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h4>somando valores</h4>
+    <input type="number" name="txt1" id="txt1"> +
+    <input type="number" name="txt2" id="txt2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado: </div><br>
+    
+    <h4>multiplicando valores</h4>
+    <input type="number" name="txt1" id="txt3"> x
+    <input type="number" name="txt2" id="txt4">
+    <input type="button" value="mult" onclick="mult()">
+    <div id="res2">Resultado: </div><br>
+
+    <script>
+        function somar() {
+            var t1 = window.document.getElementById('txt1')
+            var t2 = window.document.querySelector('input#txt2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(t1.value)
+            var n2 = Number(t2.value)
+            var s = n1 + n2
+            res.innerText = `A soma de ${n1} e ${n2} é ${s}`
+        }
+
+        function mult() {
+            var t3 = document.querySelector('input#txt3')
+            var t4 = document.querySelector('input#txt4')
+            var res2 = document.getElementById('res2')
+            var n3 = Number(t3.value)
+            var n4 = Number(t4.value)
+            var s2 = n3 * n4
+            res2.innerText = `A multiplicação de ${n3} por ${n4} é ${s2}`
+        }
+    </script>
+</body>
+</html>

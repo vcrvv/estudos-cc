@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font: normal 15pt;
+    min-height: 100vh;
+    background-image: url(manha.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+header {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-top: 200px;
+    padding-bottom: 10px;
+}
+
+
+section {
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 20px;
+    margin: auto;
+    width: 250px;
+    font-size: 3em;
+    text-align: center;
+
+
+}
+
+footer {
+    color: rgb(0, 0, 0);
+    text-align: center;
+    font-style: italic;
+    padding-top: 10px;
+}

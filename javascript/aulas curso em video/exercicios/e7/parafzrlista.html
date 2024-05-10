@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            
+        }
+        body {
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+            display: grid;
+            justify-items: center;
+            margin: auto;
+        }
+
+        #cabeçalho {
+            border: 1px solid black;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            width: 70vw;
+        }
+
+        h1 {        
+            margin-bottom: 40px;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        #lista {
+            margin-top: 10px;
+            width: 70vw;
+        }
+
+        #listar {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div id="cabeçalho">
+        <h1>Para-Fazer Lista</h1>
+        <input type="text" name="tarefa" id="txt1" placeholder="Dgitie aqui" autocomplete="no">
+        <input type="button" value="Adicionar" onclick="adicionar()">
+        <input type="button" value="Lipar Lista" onclick="limpar()">
+    </div>
+    <div id="lista">
+            <div id="listar"></div>
+    </div>
+    </div>
+    <script>
+        function limpar() {
+            lista.innerHTML = ''
+        }
+        function adicionar() {
+            let tex = document.querySelector('input#txt1')
+            if (tex.value.length == 0) {
+                window.alert('O campo não pode estar vazio!') 
+            } else {
+                let num = 0
+                num++
+                listar.innerHTML += `<div id="atv" 
+                style="padding: 20px;
+                margin-top: 5px">
+                <h3>Atividade ${num}</h3>
+                <p style="margin: 20px 0px;"> ${tex.value}<p>
+                <button id="btn"><i class="fa fa-trash" onclick="limpar2()" style="background-color: rgb(255, 255, 255);
+                    border: none;
+                    color: rgb(0, 0, 0);
+                    padding: 5px 7px;
+                    font-size: 16px;
+                    cursor: pointer;"></i></button>
+                </div>`
+            }
+            tex.value = '' 
+            tex.focus()
+        }
+        function limpar2() {
+            listar.innerHTML = ''
+        }
+    </script>
+</body>
+</html>
