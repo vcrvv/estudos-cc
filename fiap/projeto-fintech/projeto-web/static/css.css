@@ -51,13 +51,6 @@ div {
     align-items: center;
 }
 
-input {
-    width: 225px;
-    padding: 10px;
-    border: 0.3px solid rgba(0, 0, 0, 0.226);
-    border-radius: 7px;
-}
-
 button {
     align-items: center;
     width: 190px;
@@ -68,6 +61,12 @@ button {
     border-radius: 7px;
 }
 
+.caixa {
+    width: 225px;
+    padding: 10px;
+    border: 0.3px solid rgba(0, 0, 0, 0.226);
+    border-radius: 7px;
+}
 
 #esquecisenha {
     text-align: right;
