@@ -1,0 +1,161 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="513093B6-74C2-4D1B-A15A-06C5DF51DCB8" name="transacao">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:45:00 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_transacao" id="55A67579-75E4-E161-AB4E-F52EB2DE223A">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:50:22 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="produto" id="F9680D50-E7AC-EE50-446E-5F24BA1E6C8F">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:45:34 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valor" id="5C53D94F-4FC4-3A97-412A-321F59D8A30E">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:45:46 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="metodo" id="37C6D852-59E2-BFE4-ECB1-62B986742D5D">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:45:59 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="endereco_originatario" id="8CB27DC7-5B5A-B3AB-45DA-C871DCED0101">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:46:14 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="endereco_destinatario" id="DD025F51-2DB4-A408-2420-140F2471D032">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:46:45 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descricao" id="E86C0880-1B95-416E-7F76-B60A8DDC3A11">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:47:08 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="tipo" id="55982B6D-1A76-D659-AD3E-04A9D5B2AC6F">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:47:20 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome_originatario" id="70C6AAEC-B56E-CBDD-9BCF-483090713D64">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:51:15 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome_destinatario" id="C7B20169-7B3C-001F-3D43-2423B935AA54">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:51:35 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data" id="A51AA9C3-B333-D5A4-2D99-74757A6195D3">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:52:54 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT008</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

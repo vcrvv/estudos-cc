@@ -1,0 +1,97 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="BB64D6D4-586E-8B5D-6398-30ADE5B961FF" name="endereco">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:42:38 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_endereco" id="92DB460F-E13A-FDB9-7FCB-918F6B8B466E">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:42:44 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="FD30CF6D-2299-D043-78C2-491B672C9C5B">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:43:02 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cidade" id="F950A00F-0219-99E4-8AB7-096D742FC3B4">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:43:15 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="bairro" id="BBE32FE1-4DDD-9D81-85F5-233D9585A54A">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:43:24 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rua" id="2902DDCC-C8BF-01B5-5276-BE34A9964A80">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:43:41 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numero" id="23BDCC7F-ABE7-C1D2-85DF-4626EDCF8A7F">
+<createdBy>arcne</createdBy>
+<createdTime>2024-05-28 19:43:50 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
