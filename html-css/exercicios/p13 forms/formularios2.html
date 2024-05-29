@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&amp;family=Poppins&amp;display=swap');
+        :root {
+            --color-light: #F3F4F5;
+            --color-pink: #dc143c;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .container {
+            width: 90%;
+            height: auto;
+            margin: 10px auto;
+            padding: 5px;
+            border: 1px solid;
+            border-radius: 5px;
+        }
+        h1, h2 {
+            margin: 0 .5rem;
+            font-family: 'Poppins', sans-serif;
+            color: var(--color-pink);
+        }
+        .box-form {
+            margin: .5rem
+        }
+        .box-item {
+            display: flex;
+            flex-direction: column;
+            margin: .5rem 0;
+        }
+        .form-label {
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 0.5rem 0;
+        }
+        .form-control {
+            width: 100%;
+            border: 0;
+            background-color: var(--color-light);
+            height: 3.5rem;
+            border-radius: 5px;
+            padding-left: 10px;
+            font-size: 1.1rem;
+        }
+        .form-btn {
+            width: 100%;
+            margin: 0.8rem 0;
+            border: 0;
+            background-color: var(--color-pink);
+            color: #fff;
+            font-weight: 900;
+            font-size: 1.2rem;
+            height: 3.5rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Meu projeto Web</h1>
+        <h2>Crie sua conta</h2>
+        <form name="dados" id="dados" method="post" action="" class="box-form">
+           <div class="box-item">
+                 <label for="nome" class="form-label">Nome</label>
+                 <input type="text" id="nome" name="nome" class="form-control"
+                 required minlength="10" maxlength="50" placeholder="Ex: Fulano de Tal" >
+           </div>
+           <div class="box-item">
+                 <label for="email" class="form-label">Email</label>
+                 <input type="email" id="email" name="email" class="form-control" required placeholder="Ex: seuemail@email.com">
+           </div>
+           <div class="box-item">
+                 <label for="user" class="form-label">Usuário</label>
+                 <input type="text" id="user" name="user" class="form-control" required minlength="5" maxlength="15" placeholder="Ex: user12345">
+           </div>
+           <div class="box-item">
+                 <label for="senha" class="form-label">Senha</label>
+                 <input type="password" id="senha" name="senha" class="form-control" required minlength="5" maxlength="15" placeholder="Ex: 123456">
+           </div>
+           <div class="box-item">
+              <button class="form-btn">Criar conta</button>
+           </div>
+        </form>
+     </div>
+</body>
+</html>

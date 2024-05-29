@@ -1,0 +1,26 @@
+Vinicius Carvalho de Oliveira - RM55
+
+Titulo: Aplicação web de backoffice - Challenge iFood
+
+Visão Geral: 
+
+Funcionalidades:
+
+	Dashboard: resumo da conta com saldo, receitas e despesas e relatorios visuais
+
+	Historico: historico de todas as transações e pedidos da conta, com a possibilidade de filtros de pesquisa
+
+	Gerenciamento de Trasações: CRUD. criar, ler, editar e deletar
+
+	Gerador de Relatorio: gera relatorios analiticos.
+
+Insights: 
+	1-
+ 	2-
+ 	3-
+
+Tecnologias Utilizadas:
+	 Front-end: HTML, CSS e Javascript
+ 	 Back-end: Python
+ 	 Banco de Dados: PostgreeSQL
+Arquitetura:
