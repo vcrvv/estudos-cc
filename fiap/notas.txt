@@ -1,0 +1,7 @@
+Boletim
+
+Banco de Dados Relacional ------------------------------- 8.13/8.5
+Pensamento Computacional com Python --------------------- 10.68/14.01
+Formação Social e Sustentabilidade ---------------------- 2.93/4.6
+Design e Engenharia de Front-End ------------------------ 8.41/9
+Engenharia de Software e Modelo de Negocio -------------- 11.1/14.5
