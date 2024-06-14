@@ -1,0 +1,57 @@
+COMANDOS
+====================================
+root user = administrador da maquina
+
+
+sudo su - (sudo switch user) = logar como root (não é recomendado usar o root o tempo td)
+su kali = voltar para user normal
+
+pwd (print work directory) = mostra o diretorio atual
+cd (change directory) = mudar diretorio
+cd .. = diretorio anterior
+ls = mostrar arquivos do diretorio
+ls -la (long all) = mostrar todos os aquivos, incluindo os ocultos
+cd /#/ = ir para um diretorio de outro lugar
+ls #/ = mostrar arquivos de outro diretorio
+
+mkdir  = criar diretorio
+rmdir  = remover diretorio
+
+cd  = copiar arquivo para um diretorio
+rm  = remover arquivo
+mv  = mover arquivo
+cat = ler arquivo
+grep = coisa especifica
+cp  = copiar arquivo
+
+echo # > # = escreve e sobreescreve o texto
+echo # >> # = adiciona um texto no paragrafo abaixo
+
+updatedb = atualiza banco de dados
+locate "arquivo" = localizar o arquivo
+
+rede---
+ip a/ifconfig = informações de rede
+iwconfig = conexoes wireless
+ip n/arp -a = associa ip com mac
+ip r/route =
+
+---------------
+REDE:
+
+1 - Physical - data cables, cat6	
+2 - Data - Switching, MAC adresses
+3 - Network - IP adresses, routing
+4 - Transport - TCP/UDP
+5 - Session - session management
+6 - Presentation - WMV, JPEG, MOV
+7 - Application - HTTP, SMTP
+-------------------------------------
+
+sudo service apache2 start/stop = servidor apache
+python3 -m http.server 80 - servidor python
+sudo systemctl enable ssh - iniciar servidor quando a maquina iniciar
+
+sudo apt update && apt upgrade - atualizar ferramentas
+
+191.223.165.134

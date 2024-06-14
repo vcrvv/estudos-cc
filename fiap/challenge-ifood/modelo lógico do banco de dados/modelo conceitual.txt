@@ -1,0 +1,20 @@
+usuario possui suas informações pessoais e da conta como: saldo, entradas e saidas, historico de transações
+
+
+--------------------------------------------------------------
+usuario
+dados pessoais -->id_usuario, nome, email, numero, cpf, cnpj, senha, id_endereço
+conta -->id_usuario, id_conta, saldo, renda, despesas,
+
+endereço --> id_endereço, id_usuario estado, cidade, bairro, rua, numero
+
+transação -->id_transacao, id_conta, valor, data, método, de, para, descrição
+
+---------------------------------------------------------------
+UMA conta pode ter UM histórico: 1:1
+todo historico precisa de uma conta e vice-versa
+
+UM historico pode ter VARIAS transações/pedidos - 1:N
+um historico pode ter nenhuma transação/pedido
+
+UMA conta pode ter VARIAS ou nenhuma transação/pedido 1:N
