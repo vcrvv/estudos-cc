@@ -1,0 +1,56 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="42ADC0CA-FA11-8116-4B0A-FE1551E0F272" name="conta">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>31C749BE-79F4-A27D-D265-8B858A53F794</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_conta" id="2AF031AC-AAEA-A905-7A35-4C80D8F0B0B3">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>AFABFBA4-8F43-A3F9-E6AD-C1AE63C22213</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_usuario" id="1B584F30-6007-11E8-E7AC-8F2738A912A4">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>8ABC3C9A-FD17-2538-DE1B-BD2F34281ED0</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="saldo" id="6E63A7F8-AAA7-563C-362F-8546DE1BA318">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>ED86BFAF-E435-37F8-E114-B583052A5461</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="Attribute_28" id="8287C273-AE15-E2CE-428C-D437F1FB7950">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>1F8CC841-20D3-6F34-7863-DFFE5EA42DFE</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

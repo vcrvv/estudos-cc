@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="9061FB0E-0B2A-CE28-6ACF-BD6AB23B4711" name="usuario">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>EE66ED6F-8520-9141-8162-6B534B3C0102</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_usuario" id="7B7A26B5-6335-BB3D-ECB4-78421BF51A78">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>7D41DCF3-6EEF-9D0C-3904-136FA164A259</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_conta" id="5CC53268-B9E4-8259-ABAA-EEC69F4AD0A0">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>7CAE238F-12C8-89EA-57B6-3E2C7C5D77C2</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="id_endereco" id="D6910505-5CD6-84C9-0C0E-1CAE397D1936">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>E80B2917-BC5F-0F9A-28FA-1D65359DDF3B</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nome" id="2200B129-6BC9-E68D-F872-EE5E366AF44B">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>9D462505-11C1-B58B-32B1-6BAC577C3710</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="E9D0DEE4-0A38-8811-3121-C896CED992B9">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>6B26B31C-A2CA-2F33-16AE-4250FAA71BC3</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cpf" id="C7BA10D9-39A7-D630-A05E-9D1F9F7AE18B">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>F7AF6097-9A6F-ABC8-7619-F9D853667EC5</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cnpj" id="B80F658E-24FC-0A88-6D27-5D6FD38D3A40">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>5DF723FB-62A2-B96F-BD55-A680EDB593C4</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="senha" id="32ECFBAA-1DA5-8018-6C53-6683AC00CC9F">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>98BF9F7D-D032-A7F5-3912-322D32E0E789</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="2141B6DF-A9F3-0FAF-D6B7-2C9C264E305B" name="usuario_PK">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>10358B5E-F1BA-253E-BA81-57EA8A403592</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="7B7A26B5-6335-BB3D-ECB4-78421BF51A78"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

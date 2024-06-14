@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AAB6CEDA-7C77-B79A-EB10-D393D7559599" name="endereco">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>BB64D6D4-586E-8B5D-6398-30ADE5B961FF</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_endereco" id="E53B4A76-714F-0BB1-57BC-8B688F890FEC">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>92DB460F-E13A-FDB9-7FCB-918F6B8B466E</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="81F67044-DDBC-8F17-7840-35401F819E12">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>FD30CF6D-2299-D043-78C2-491B672C9C5B</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cidade" id="06BF1986-6935-A657-C234-7E00376537EA">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>F950A00F-0219-99E4-8AB7-096D742FC3B4</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="bairro" id="3FAED38B-0AFC-5AB4-3A5A-8F77B9CAB34D">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>BBE32FE1-4DDD-9D81-85F5-233D9585A54A</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rua" id="805A6124-A7D7-52A1-030E-F1ACFE813BF5">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>2902DDCC-C8BF-01B5-5276-BE34A9964A80</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="numero" id="966BEED3-1834-8766-E5CB-DEC20AC09B15">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:31:27 UTC</createdTime>
+<generatorID>23BDCC7F-ABE7-C1D2-85DF-4626EDCF8A7F</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+</Table>

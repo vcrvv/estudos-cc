@@ -1,0 +1,71 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="31C749BE-79F4-A27D-D265-8B858A53F794" name="CONTA">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:20:58 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_conta" id="AFABFBA4-8F43-A3F9-E6AD-C1AE63C22213">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:21:04 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="saldo" id="ED86BFAF-E435-37F8-E114-B583052A5461">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 17:21:14 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_usuario" id="D80BAA1E-96D6-489D-250C-1253A8CF18E1">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 18:50:14 UTC</createdTime>
+<generatorID>2E2EBE5A-2D3E-6BAD-0D01-B88F74C5B993</generatorID>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<referedAttribute>7D41DCF3-6EEF-9D0C-3904-136FA164A259</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="DBA3BFE3-F811-BD68-CB81-D6A7CE5AECED" name="conta PK">
+<createdBy>arcne</createdBy>
+<createdTime>2024-06-05 18:42:11 UTC</createdTime>
+<ownerDesignName>MER_projeto</ownerDesignName>
+<engineerTo>
+<item key="04C36989-FEC6-9A5E-D0CC-284E8BCF5F08" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>AFABFBA4-8F43-A3F9-E6AD-C1AE63C22213</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
