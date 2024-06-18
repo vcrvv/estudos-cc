@@ -1,4 +1,6 @@
-COMANDOS
+191.223.165.134
+
+COMANDOS DE NAVEGAÇÃO
 ====================================
 root user = administrador da maquina
 
@@ -30,7 +32,7 @@ echo # >> # = adiciona um texto no paragrafo abaixo
 updatedb = atualiza banco de dados
 locate "arquivo" = localizar o arquivo
 
-rede---
+rede----
 ip a/ifconfig = informações de rede
 iwconfig = conexoes wireless
 ip n/arp -a = associa ip com mac
@@ -54,4 +56,6 @@ sudo systemctl enable ssh - iniciar servidor quando a maquina iniciar
 
 sudo apt update && apt upgrade - atualizar ferramentas
 
-191.223.165.134
+
+NMAPA//
+nmap -T4(velocidade) -p-(escanear todas as portas) -A(escanear tudo) = escanear as portas de uma rede
