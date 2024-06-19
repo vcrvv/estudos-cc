@@ -1,0 +1,23 @@
+{% extends 'livros/base.html' %}
+{% block conteudo %}
+
+<div class="container">
+    <h3>Lista de Usuarios</h3>
+    <table class="table table-bordered table-striped">
+        <tr>
+            <th>id</th>
+            <th>nome</th>
+            <th>idade</th>
+            <th>curso</th>
+        </tr>
+        {% for usuario in usuarios %}
+        <tr>
+            <td>{{ livro.id_usuario }}</td>
+            <td>{{ livro.nome }}</td>
+            <td>{{ livro.idade }}</td>
+            <td>{{ livro.curso }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
