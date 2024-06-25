@@ -1,0 +1,10 @@
+-sudo su
+-locate proxychains
+-vi /etc/proxychains.conf
+
+-descomentar 'dynamic_chain'
+-comentar 'strict_chain'
+-comentar socks4 padrao
+-digitar outra server ip e porta
+
+ESC -> :wq  -> ENTER

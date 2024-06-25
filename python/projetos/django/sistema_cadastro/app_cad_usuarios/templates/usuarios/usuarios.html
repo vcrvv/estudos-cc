@@ -1,4 +1,4 @@
-{% extends 'livros/base.html' %}
+{% extends 'usuarios/base.html' %}
 {% block conteudo %}
 
 <div class="container">
@@ -7,15 +7,13 @@
         <tr>
             <th>id</th>
             <th>nome</th>
-            <th>idade</th>
             <th>curso</th>
         </tr>
         {% for usuario in usuarios %}
         <tr>
-            <td>{{ livro.id_usuario }}</td>
-            <td>{{ livro.nome }}</td>
-            <td>{{ livro.idade }}</td>
-            <td>{{ livro.curso }}</td>
+            <td>{{ usuario.id_usuario }}</td>
+            <td>{{ usuario.nome }}</td>
+            <td>{{ usuario.curso }}</td>
         </tr>
         {% endfor %}
     </table>
