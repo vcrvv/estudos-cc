@@ -27,8 +27,6 @@ public class P01 {
                 if (numeroAdv > numeroRan) {
                     System.out.println("O numero é menor...");
                 }
-
-                
             }
         }        
 
