@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+    {% block conteudo %}
+    <h1>Livros Para Ler</h1>
+    <a href="{% url 'adicionar_livro' %}">Adicionar Livro</a>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Autor</th>
+                    <th>Lancamento</th>
+                    <th>Descrição</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for livro in livros %}
+                    <tr>
+                        <td>{{ livro.titulo }}</td>
+                        <td>{{ livro.autor }}</td>
+                        <td>{{ livro.lancamento }}</td>
+                        <td>{{ livro.descricao }}</td>
+                        <td>
+                            <a href="deletar/{{ livro.id }}">Deletar</a>
+                        </td>
+                    <tr>
+                {% empty %}
+                    <p>Não há livros adicionados.</p>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endblock %}
