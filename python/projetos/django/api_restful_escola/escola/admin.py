@@ -15,3 +15,9 @@ class Cursos(admin.ModelAdmin):
     search_fields = ('codigo',)
 
 admin.site.register(Curso, Cursos)
+
+class Matriculas(admin.ModelAdmin):
+    list_display = ('id', 'estudante', 'curso', 'periodo')
+    list_display_links = ('id',)
+
+admin.site.register(Matricula, Matriculas)
