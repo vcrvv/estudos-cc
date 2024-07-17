@@ -1,0 +1,44 @@
+vini:dbVInipass -
+-------------------------------------------------------------------------------------
+mongosh >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> iniciar conexão
+
+show dbs >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> mostrar todos os bancos de dados
+use "database" >>>>>>>>>>>>>>>>>>>>>>>>>>>>>> usar um banco de dados
+db.dropDatabase() >>>>>>>>>>>>>>>>>>>>>>>>>>> excluir banco de dados
+db.createCollection("#") >>>>>>>>>>>>>>>>>>>> criar coleção no banco de dados
+db.collection.drop() >>>>>>>>>>>>>>>>>>>>>>>> apagar coleção
+
+
+db.[coleção] = --
+--.insertOne({<chave:"valor">, <chave:valor>}) >> adicionar um documentos na coleção
+--.find() >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> mostrar documentos de uma coleção
+--.insertMany([{}, {}]) >>>>>>>>> adicionar varios documentos de uma vez na coleção
+--.find().sort({<chave>: (1, -1)}) >>>>>>>>>>>> mostrar documentos ordedados por "chave" na ordem 1 ou -1
+--.find().limit(<x>) >>>>>>>>>>>>>>>>>>>>>>>>>> limitar a quantidade de documentos a ser mostrados por "x"
+--.find({<query>}, {<projeção>}) >>>>>>>>>>>> mostrar de forma especifica/filtro usando o parametro e projeção
+--.updateOne({<filtro>}, {<update>}) >>>>>>>>>>>> atualizar um ou varios documentos (EX: {$set: {chave:valor}}) $set - atualiza ou adiciona
+--.deleteOne({<filtro>}) e deleteMany({}) >> apagar documento
+--.createIdexes()
+--.replaceOne({}) >>>>>>>>>>>>>>>>>>>>>>>>>>> substitui um documento
+----------operadores-----------------
+$all >> retornar todos 
+$set >> selecionar
+$unset >> deselecionar
+
+---------operadores de comparação----------
+$ne >> not equal (!=)
+$lt >> less than (<)
+$lte >> less than equal (<=)
+$gt >> grater than (>)
+$gte >> grater than equal (>=)
+$in >> em
+$nin >> not in
+
+---------operadores lógicos----------------
+$and > as duas condições precisam ser verdadeiras
+$or  > pelo menos uma das condições precisa ser verdadeira
+$nor > as duas condições precisam ser falsas
+$not > oposto
+
+
+
