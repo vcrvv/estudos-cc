@@ -15,7 +15,7 @@ lista.sort(key=lambda jogador: jogador['Dado'], reverse=True)
 
 print('\nTabela de Classificação:')
 for i, jogador in enumerate(lista, start=1):
-    print(f'{i}o.:  Jogador{jogador["Jogador"]} com {jogador["Dado"]}')
+    print(f'{i}:  Jogador {jogador["Jogador"]} com {jogador["Dado"]}')
     
 ##
 

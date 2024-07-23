@@ -26,8 +26,8 @@ class DocCpf:
         return validador.validate(documento)
 
     def format(self):
-      mascara = CPF()
-      return mascara.mask(self.cpf)
+        mascara = CPF()
+        return mascara.mask(self.cpf)
 
 class DocCnpj:
     def __init__(self, documento):

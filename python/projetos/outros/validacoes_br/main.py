@@ -1,6 +1,6 @@
-from validacoes import *
-from telefonesbr import *
-from datasbr import *
+from validacoes import Documento
+from telefonesbr import TelefonesBr
+from datasbr import DatasBr
 from acesso_cep import buscaEndereco
 
 cpf = "05350945238"

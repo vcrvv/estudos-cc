@@ -11,10 +11,7 @@ class buscaEndereco:
         return self.format_cep()
     
     def cep_eh_valido(self, cep):
-        if len(cep) == 8:
-            return True
-        else:
-            return False
+        return len(cep) == 8
     
     def format_cep(self):
         return f"{self.cepv[:5]}-{self.cepv[5:]}"
