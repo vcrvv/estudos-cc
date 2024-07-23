@@ -34,5 +34,6 @@ numeros_impares = list(filter(lambda y: y % 2 != 0, lista))
 print(numeros_pares, numeros_impares)
 
 listaa = range(-5, 5)
+
 menor_q_zero = list(filter(lambda x: x < 0, listaa))
 print(menor_q_zero)
