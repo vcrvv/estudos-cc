@@ -36,3 +36,4 @@ class DatasBr:
     def tempo_cadastro(self):
         tempo_cadastro = datetime.today() - self.momento_cadastro
         return tempo_cadastro
+    
