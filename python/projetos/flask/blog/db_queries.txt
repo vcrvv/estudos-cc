@@ -1,0 +1,69 @@
+flask run
+flask db migrate -m '<nome> table'
+flask db upgrade
+
+
+>>>python
+>>> from app import app, db
+>>> from app.models import User, Post
+>>> import sqlalchemy as sa
+
+>>> app.app_context().push()
+
+>>> u = User(username='john', email='john@example.com')
+>>> db.session.add(u)
+>>> db.session.commit()
+
+>>> u = User(username='susan', email='susan@example.com')
+>>> db.session.add(u)
+>>> db.session.commit()
+
+>>> query = sa.select(User)
+>>> users = db.session.scalars(query).all()
+>>> users
+[<User john>, <User susan>]
+
+>>> users = db.session.scalars(query)
+>>> for u in users:
+...     print(u.id, u.username)
+...
+1 john
+2 susan
+--------------------------------------------------------------------
+OUTROS
+--------------------------------------------------------------------
+>>> # get all posts written by a user
+>>> u = db.session.get(User, 1)
+>>> u
+<User john>
+>>> query = u.posts.select()
+>>> posts = db.session.scalars(query).all()
+>>> posts
+[<Post my first post!>]
+
+>>> # same, but with a user that has no posts
+>>> u = db.session.get(User, 2)
+>>> u
+<User susan>
+>>> query = u.posts.select()
+>>> posts = db.session.scalars(query).all()
+>>> posts
+[]
+
+>>> # print post author and body for all posts
+>>> query = sa.select(Post)
+>>> posts = db.session.scalars(query)
+>>> for p in posts:
+...     print(p.id, p.author.username, p.body)
+...
+1 john my first post!
+
+# get all users in reverse alphabetical order
+>>> query = sa.select(User).order_by(User.username.desc())
+>>> db.session.scalars(query).all()
+[<User susan>, <User john>]
+
+# get all users that have usernames starting with "s"
+>>> query = sa.select(User).where(User.username.like('s%'))
+>>> db.session.scalars(query).all()
+[<User susan>]

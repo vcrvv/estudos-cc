@@ -9,6 +9,7 @@ print(frase[:8]) #Ciencias
 print(frase[12:22:2]) #c m u a ã
 print(frase[12:]) #Computação
 print(frase[12::3]) #C  p  a  o
+
 #ANÁLISE
 print(len(frase)) #tamanho
 print(frase.count('a')) #contagem de caracteres
@@ -25,5 +26,3 @@ print(frase.lstrip()) # retira espaços desnecessarios na esquerda
 print(frase.rstrip()) # retira espaços desnecessarios na direita
 print(frase.split()) #separa entre os espaços para formar strings 
 print('-'.join(frase)) #junta as strings
-
-
