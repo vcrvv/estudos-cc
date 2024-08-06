@@ -1,0 +1,11 @@
+
+# RECURSÃO
+def fatorial(n: int) -> int: 
+    # n! = n * (n - 1) * (n - 1)
+    if n != 1:
+        return n * fatorial(n - 1)
+    else:
+        return n
+
+print(fatorial(5)) 
+

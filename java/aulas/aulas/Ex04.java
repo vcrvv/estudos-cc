@@ -1,2 +1,9 @@
-package PACKAGE_NAME;public class Ex04 {
+public class Ex04 {
+    public static void main(String[] args) {
+        int num = 1;
+        while (num <= 10) {
+            System.out.println(num);
+            num++;
+        }
+    }
 }
