@@ -2,14 +2,14 @@ import java.util.Scanner;
 
 public class Ex03 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner leia = new Scanner(System.in);
 
         System.out.println("Bem-vindo ao Café do Java!");
         System.out.println("Escolha o tamanho do seu café: (P) Pequeno, (M) Médio, (G) Grande");
-        String tamanho = scanner.nextLine().toUpperCase();
+        String tamanho = leia.nextLine().toUpperCase();
 
         System.out.println("Escolha o tipo de café: (E) Expresso, (C) Cappuccino, (L) Latte");
-        String tipoCafe = scanner.nextLine().toUpperCase();
+        String tipoCafe = leia.nextLine().toUpperCase();
 
         double preco = 0;
 
