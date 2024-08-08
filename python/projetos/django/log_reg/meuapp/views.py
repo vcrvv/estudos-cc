@@ -17,9 +17,11 @@ def register(request):
             if User.objects.filter(email=email).exists():
                 messages.info(request, 'Email Already Used')
                 return redirect('register')
+            
             elif User.objects.filter(username=username).exists():
                 messages.info(request, 'Username Already Used')
                 return redirect('register')
+            
             else:
                 user = User.objects.create_user(username=username, email=email, password=password)
                 user.save()
@@ -41,6 +43,7 @@ def login(request):
         if user is not None:
             auth.login(request, user)
             return redirect('/')
+        
         else:
             messages.info(request, 'Credentials Invalid')
             return redirect('login')

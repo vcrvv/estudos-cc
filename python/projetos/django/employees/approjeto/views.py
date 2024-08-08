@@ -38,4 +38,3 @@ def destroy(request, id):
     employee.delete()
     return redirect('/show')
     
-# Create your views here.
