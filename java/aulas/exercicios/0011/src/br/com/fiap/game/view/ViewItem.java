@@ -1,7 +1,11 @@
+package br.com.fiap.game.view;
+
 import java.util.Scanner;
+import br.com.fiap.game.model.Item;
 
 public class ViewItem {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
         Item item = null;
         int op;
@@ -26,7 +30,7 @@ public class ViewItem {
 
                 case 2:
                     if (item != null) {
-                        System.out.println("Nome: " + item.nome + " Descrição: " + item.descricao + " Raro: " + item.raro + " Nivel de poder: " + item.nivelPoder);
+                        System.out.println("Nome: " + item.getNome() + " Descrição: " + item.getDescricao() + " Raro: " + item.isRaro() + " Nivel de poder: " + item.getNivelPoder());
                     } else {
                         System.out.println("Nenhum item cadastrado ainda.");
                         break;
