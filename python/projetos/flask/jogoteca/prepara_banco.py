@@ -1,12 +1,12 @@
 import mysql.connector
-from flask_bcrypt import generate_passowrod_hash
+from flask_bcrypt import generate_password_hash
 
 
 print("Conectando...")
 conn = mysql.connector.connect(
     host='127.0.0.1',
     user='root',
-    password='admin'
+    password='root'
 )
 
 cursor = conn.cursor()
