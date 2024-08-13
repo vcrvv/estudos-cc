@@ -11,7 +11,7 @@ def get_token():
     return {'token': token}
 
 
-d@bp.route('/tokens', methods=['DELETE'])
+@bp.route('/tokens', methods=['DELETE'])
 @token_auth.login_required
 def revoke_token():
     token_auth.current_user().revoke_token()
