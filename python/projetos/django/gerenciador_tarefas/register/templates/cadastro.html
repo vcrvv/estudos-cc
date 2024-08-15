@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Cadastrar Conta{% endblock %}
+
+{% load crispy_forms_tags %}
+
+{% block conteudo %}
+    <form method="POST" class="form-group" style="width: fit-content;">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <button type="submit" class="btn btn-success">Cadastrar</button>
+    </form>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block titulo %}Lista{% endblock %}
+{% block conteudo %}
+    <h1>{{ ls.nome }}</h1>
+    <form method="post" action="#">
+        {% csrf_token %}
+        {% for item in ls.item_set.all %}
+        <div>
+            <div class="input-group-text" style="width: fit-content; margin: 5px 4px; display: block ruby;">
+                {% if item.completo == True %}
+                    <input type='checkbox' value="clicado" name="c{{ item.id }}" checked > 
+                {% else %}
+                    <input type='checkbox' value="clicado" name="c{{ item.id }}">
+                {% endif %}
+                <input type="text" value="{{ item.texto }}" class="form-control">
+            </div>
+        </div>  
+        {% endfor %}    
+        
+        <div class="input-group mb-3" style="align-items: center;">
+                <input type="text" name="textoItem" class="form-control">
+                <button type="submit" name="novoItem" value="nomeItem" class="btn btn-outline-secondary">Adicionar Item</button>
+                <button type="submit" name="salvar" value="salvar" class="btn btn-outline-secondary" id="button-addon1">Salvar</button>
+        </div>
+    </form>
+{% endblock %}

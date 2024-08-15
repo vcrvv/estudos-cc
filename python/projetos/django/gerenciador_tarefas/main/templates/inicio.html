@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block titulo %}Inicio{% endblock %}
+
+{% block conteudo %}
+
+<h3>Listas de Tarefas</h3>
+
+{% for td in user.listatarefa.all %}
+        <p><a href="/{{ td.id }}">{{ td.nome }}</a></p>
+    {% endfor %}
+
+{% endblock %}
