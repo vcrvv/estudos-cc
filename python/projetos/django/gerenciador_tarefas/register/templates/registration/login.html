@@ -9,7 +9,7 @@
     <form method="POST" class="form-group" style="width: fit-content;">
         {% csrf_token %}
         {{ form|crispy }}
-        <p><a href="/cadastro">Não tenho uma conta</a></p>
+        <p><a href="{% url 'cadastro' %}">Não tenho uma conta</a></p>
         <button type="submit" class="btn btn-success">Logar</button>
     </form>
 

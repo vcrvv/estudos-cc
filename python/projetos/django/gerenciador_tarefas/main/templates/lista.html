@@ -5,20 +5,18 @@
     <form method="post" action="#">
         {% csrf_token %}
         {% for item in ls.item_set.all %}
-        <div>
-            <div class="input-group-text" style="width: fit-content; margin: 5px 4px; display: block ruby;">
+            <div class="input-group-text" style="max-width: 88%; margin: 5px 4px; display: block ruby;">
                 {% if item.completo == True %}
-                    <input type='checkbox' value="clicado" name="c{{ item.id }}" checked > 
+                    <input class="form-check-imput mt-0" type='checkbox' value="clicado" name="c{{ item.id }}" checked > 
                 {% else %}
-                    <input type='checkbox' value="clicado" name="c{{ item.id }}">
+                    <input class="form-check-imput mt-0" type='checkbox' value="clicado" name="c{{ item.id }}">
                 {% endif %}
-                <input type="text" value="{{ item.texto }}" class="form-control">
+                <input class="form-control" type="text" value="{{ item.texto }}" >
             </div>
-        </div>  
-        {% endfor %}    
         
+        {% endfor %}    
         <div class="input-group mb-3" style="align-items: center;">
-                <input type="text" name="textoItem" class="form-control">
+                <input type="text" name="textoItem" class="form-control" style="margin: 20px 0px;">
                 <button type="submit" name="novoItem" value="nomeItem" class="btn btn-outline-secondary">Adicionar Item</button>
                 <button type="submit" name="salvar" value="salvar" class="btn btn-outline-secondary" id="button-addon1">Salvar</button>
         </div>

@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from .models import *
 from .forms import *
+from django.contrib.auth.decorators import login_required
 
 
 def index(request, id):
@@ -29,23 +30,27 @@ def index(request, id):
     
     return render(request, 'inicio.html', {'ls':ls})
 
+
 def inicio(request):
     return render(request, 'inicio.html')
 
 
 def criar(request):
-    if request.method == 'POST':
-        form = CriarNovaLista(request.POST)
-        
-        if form.is_valid():
-            n = form.cleaned_data['nome']
-            t = listaTarefa(nome=n)
-            t.save()
-            request.user.listatarefa.add(t)
+    if request.user.is_authenticated:
+        if request.method == 'POST':
+            form = CriarNovaLista(request.POST)
             
-        return HttpResponseRedirect(f"/{t.id}")
-    
-    else:
-        form = CriarNovaLista()
+            if form.is_valid():
+                n = form.cleaned_data['nome']
+                t = listaTarefa(nome=n)
+                t.save()
+                request.user.listatarefa.add(t)
+                
+            return HttpResponseRedirect(f"/{t.id}")
         
-    return render(request, 'criar.html', {'form':form})
+        else:
+            form = CriarNovaLista()
+            
+        return render(request, 'criar.html', {'form':form})
+    
+    return redirect('login')

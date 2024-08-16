@@ -3,10 +3,15 @@
 
 {% block conteudo %}
 
-<h3>Listas de Tarefas</h3>
+{% if user.is_authenticated %}
+    <h3>Listas de Tarefas</h3>
 
-{% for td in user.listatarefa.all %}
-        <p><a href="/{{ td.id }}">{{ td.nome }}</a></p>
-    {% endfor %}
-
+    {% for td in user.listatarefa.all %}
+            <p>
+                <a href="/{{ td.id }}">{{ td.nome }}</a>
+            </p>
+        {% endfor %}
+{% else %}
+    <h3>Acesso disponível apenas para usuários cadastrados.</h3>
+{% endif %}
 {% endblock %}
