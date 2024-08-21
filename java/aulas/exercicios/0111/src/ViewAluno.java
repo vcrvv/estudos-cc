@@ -20,16 +20,22 @@ public class ViewAluno {
                 case 1:
                     System.out.println("Qual o nome do aluno?");
                     String nome = sc.next() + sc.nextLine();
+                    
                     System.out.println("Qual o RM?");
                     int rm = sc.nextInt();
+
                     System.out.println("Qual o logradouro do aluno?");
                     String logradouro = sc.next() + sc.nextLine();
+
                     System.out.println("Qual o número?");
                     String numero = sc.next() + sc.nextLine();
+
                     System.out.println("Qual o CEP?");
                     String cep = sc.next() + sc.nextLine();
+
                     System.out.println("Qual o nome da cidade?");
                     String nomeCidade = sc.next() + sc.nextLine();
+
                     System.out.println("Qual o estado?");
                     String estado = sc.next() + sc.nextLine();
 

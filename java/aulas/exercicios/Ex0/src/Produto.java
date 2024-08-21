@@ -1,3 +1,5 @@
+package Ex0.src;
+
 public class Produto { 
     String nome;
     double preco;
@@ -9,6 +11,7 @@ public class Produto {
         this.quantidade = quantidade;
     }
     public Produto(){}
+    
     public void exibirInformacoes() {
         System.out.println("Nome do produto: " + nome);
         System.out.println("Preço: R$" + preco);

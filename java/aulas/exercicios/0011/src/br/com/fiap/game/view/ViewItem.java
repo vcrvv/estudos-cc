@@ -19,12 +19,16 @@ public class ViewItem {
                 case 1:
                     System.out.println("Digite o nome do item:");
                     String nome = sc.next() + sc.nextLine();
+
                     System.out.println("Digite a descrição do item: ");
                     String descricao = sc.next() + sc.nextLine();
+
                     System.out.println("O item é raro? (true/false)");
                     boolean raro = sc.nextBoolean();
+
                     System.out.println("Digite o nível de poder do item:");
                     int nivelPoder = sc.nextInt();
+                    
                     item = new Item(nome, descricao, raro, nivelPoder);
                     break;
 

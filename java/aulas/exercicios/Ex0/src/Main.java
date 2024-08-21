@@ -1,3 +1,4 @@
+package Ex0.src;
 import java.util.Scanner ;
 
 public class Main {

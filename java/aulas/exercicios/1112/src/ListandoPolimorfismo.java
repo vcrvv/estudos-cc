@@ -14,9 +14,7 @@ public class ListandoPolimorfismo {
         //looping que executa para cada objeto do tipo Produto
         //presente na lista produtos
         for (var produtoNaLista : produtos) {
-            System.out.println("O produto: " 
-                      + produtoNaLista + " tem forma de entrega: " 
-                      + produtoNaLista.getFormaEntrega());
+            System.out.println("O produto: " + produtoNaLista + " tem forma de entrega: " + produtoNaLista.getFormaEntrega());
         }
 
     }
