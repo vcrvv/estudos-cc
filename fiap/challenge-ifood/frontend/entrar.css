@@ -1,3 +1,9 @@
+@import url("/usr/share/fonts/roboto/stylesheet.css");
+
+* {
+    font-family: 'iFood RC Textos', sans-serif;
+}
+
 html,body {
     height: 100%;
 }
@@ -8,7 +14,7 @@ body.my-login-page {
     font-size: 14px;
 }
 
-.my-login-page .brand {
+.brand {
     width: 90px;
     height: 90px;
     overflow: hidden;
@@ -19,63 +25,70 @@ body.my-login-page {
     z-index: 1;
 }
 
-.my-login-page .brand img {
+.brand img {
     width: 100%;
 }
 
-.my-login-page .card-wrapper {
+.card-wrapper {
     width: 400px;
 }
 
-.my-login-page .card {
+.card {
     border-color: transparent;
     box-shadow: 0 4px 8px rgba(0,0,0,.05);
 }
 
-.my-login-page .card-title {
+.card-title {
     color: #EA1D2C;
 }
 
-.my-login-page .card-body  p {
+.card-body  p {
     color: #3E3E3E;
 }
 
-.my-login-page .card.fat {
+.card.fat {
     padding: 10px;
 }
 
-.my-login-page .form-control {
+.form-control {
     border-width: 2.3px;
 }
 
-.my-login-page .form-group label {
+.form-group label {
     width: 100%;
     font-size: larger;
 
 }
 
-.my-login-page .btn.btn-block {
+.btn.btn-block {
     padding: 12px 10px;
     width: 100%;
     color: white;
     background-color: #EA1D2C;
+    font-weight: bold;
+    font-size: large;
+    border-color: none;
+    border: none;
+}
+
+.btn.btn-block:hover {
+    background-color: #EE4C58;
 }
 
 
-
 @media screen and (max-width: 425px) {
-    .my-login-page .card-wrapper {
+    .card-wrapper {
         width: 90%;
         margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 320px) {
-    .my-login-page .card.fat {
+    .card.fat {
         padding: 0;
     }
 
-    .my-login-page .card.fat .card-body {
+    .card-body {
         padding: 15px;
     }
 }

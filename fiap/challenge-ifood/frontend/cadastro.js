@@ -1,7 +1,7 @@
-const form = document.querySelector("form");
-const nextBtn = form.querySelector(".nextBtn");
-const backBtn = form.querySelector(".backBtn");
-const allInput = form.querySelectorAll(".first input");
+const form = document.querySelector("form"), 
+nextBtn = form.querySelector(".nextBtn"),
+backBtn = form.querySelector(".backBtn"),
+allInput = form.querySelectorAll(".first input");
 
 
 nextBtn.addEventListener("click", ()=> {    

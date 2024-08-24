@@ -8,9 +8,7 @@ public class PersonagemMagico {
 
     private HabilidadeEspecial habilidade;
 
-    public PersonagemMagico() {
-        
-    }
+    public PersonagemMagico() {}
 
     public void PersionagemMagico(String nome) {
         this.nome = nome;

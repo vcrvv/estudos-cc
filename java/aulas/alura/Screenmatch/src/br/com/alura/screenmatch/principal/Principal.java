@@ -16,12 +16,16 @@ public class Principal {
         System.out.println(meuFilme.getTotalDeAvaliacoes());
         System.out.println(meuFilme.obtemMedia());
 
+        System.out.println("======================================================");
+
         Serie serie = new Serie("Lost", 200);
         serie.setTemporadas(10);
         serie.setEpisodioPorTemporada(10);
         serie.setMinutosPorEpisodio(50);
         serie.exibeFichaTecnica();
         System.out.println("Duração da série: " + serie.getDuracaoEmMinutos());
+
+        System.out.println("======================================================");
 
         Calculadora calculadora = new Calculadora();
         calculadora.inclui(meuFilme);
@@ -30,16 +34,22 @@ public class Principal {
         FiltroRecomedacao filtro = new FiltroRecomedacao();
         filtro.filtra(meuFilme);
 
+        System.out.println("======================================================");
+
         Episodio episodio = new Episodio();
         episodio.setNumero(1);
         episodio.setSerie(serie);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
+
         var filmeDoVini = new Filme("Duna 2", 2024);
         //filmeDoVini.setNome("Duna 2");
         filmeDoVini.setDuracaoEmMinutos(166);
         filmeDoVini.avalia(10);
+
+        System.out.println("======================================================");
+
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
         listaDeFilmes.add(filmeDoVini);
