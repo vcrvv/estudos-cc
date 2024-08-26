@@ -1,44 +1,67 @@
 import java.util.Date;
 
-public class Transacao {
-    private double valor;      
-    private String tipo;       
-    private Date data;  
+public abstract class Transacao {
+    private int id;
     private String descricao;
-    private int contaId; 
-    
-    public Transacao (double valor, String tipo, Date data, String descricao) {
+    private double valor;
+    private Date data;
+    private Conta conta;
+
+    public Transacao(int id, String descricao, double valor, Date data, Conta conta) {
+        this.id = id;
+        this.descricao = descricao;
         this.valor = valor;
-        this.tipo = tipo;
         this.data = data;
+        this.conta = conta;
+    }
+
+    
+    // Getters e Setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
 
-    // Getters e Setters
-    public Date getData() {return data;}
-    public void setData(Date data) {this.data = data;}
+    public double getValor() {
+        return valor;
+    }
 
-    public double getValor() {return valor;}
-    public void setValor(double valor) {this.valor = valor;}
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
 
-    public String getTipo() {return tipo;}
-    public void setTipo(String tipo) {this.tipo = tipo;}
+    public Date getData() {
+        return data;
+    }
 
-    public String getDescricao() {return descricao;}
-    public void setDescricao(String descricao) {this.descricao = descricao;}
+    public void setData(Date data) {
+        this.data = data;
+    }
+
+    public Conta getConta() {
+        return conta;
+    }
+
+    public void setConta(Conta conta) {
+        this.conta = conta;
+    }
 
     // Métodos
-    public void entrada() {
-        // cadastrar entradas na conta
-        System.out.println("Entrada cadastrada com sucesso!");
-    }
-    
-    public void saida() {
-        // cadastrar saidas na conta
-        System.out.println("Saida cadastrada com sucesso!");
-    }
+    public abstract void executar();
 
-    public String exibirDetalhesDaTransacao() {
-        return String.format("ID: %d, Date: %s, Amount: %.2f, Description: %s", contaId, data.toString(), valor, descricao);
+    @Override
+    public String toString() {
+        return "Transacao [id=" + id + ", descricao=" + descricao + ", valor=" + valor + ", data=" + data + "]";
     }
 }

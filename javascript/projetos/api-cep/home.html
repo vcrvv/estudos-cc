@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de CEP</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Consulta de CEP</h1>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <form id="cep-form">
+                    <div class="form-group">
+                        <label for="cep">Digite o CEP:</label>
+                        <input type="text" class="form-control" id="cep" placeholder="00000-000" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Consultar</button>
+                </form>
+                <div id="cep-info" class="mt-4 d-none">
+                    <h4>Informações do CEP:</h4>
+                    <ul class="list-group">
+                        <li class="list-group-item"><strong>CEP:</strong> <span id="info-cep"></span></li>
+                        <li class="list-group-item"><strong>Logradouro:</strong> <span id="info-logradouro"></span></li>
+                        <li class="list-group-item"><strong>Bairro:</strong> <span id="info-bairro"></span></li>
+                        <li class="list-group-item"><strong>Cidade:</strong> <span id="info-cidade"></span></li>
+                        <li class="list-group-item"><strong>Estado:</strong> <span id="info-estado"></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery, Popper.js, Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

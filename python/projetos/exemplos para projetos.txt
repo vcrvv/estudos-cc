@@ -52,7 +52,7 @@
     Funcionalidades: Envio de avaliações, visualização de médias e comentários, painel de administração.
     Tecnologias: Django, Django REST Framework para API, PostgreSQL.
 
-10. Aplicativo de Controle de Finanças Pessoais
+10. 
 
     Descrição: Ferramenta para acompanhar e gerenciar suas finanças pessoais.
     Funcionalidades: Registro de receitas e despesas, categorização de transações, relatórios financeiros.
