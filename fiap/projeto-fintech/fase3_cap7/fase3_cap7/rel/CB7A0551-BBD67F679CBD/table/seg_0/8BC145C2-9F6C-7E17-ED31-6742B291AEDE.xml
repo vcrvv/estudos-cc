@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="8BC145C2-9F6C-7E17-ED31-6742B291AEDE" name="CONTA">
+<createdBy>arcne</createdBy>
+<createdTime>2024-04-30 18:51:16 UTC</createdTime>
+<ownerDesignName>fase3_cap7</ownerDesignName>
+<ordsAlias>table_1</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id_usuario" id="61109D33-5B6A-4979-5C97-E38FB5E07586">
+<createdBy>arcne</createdBy>
+<createdTime>2024-04-30 18:52:47 UTC</createdTime>
+<ownerDesignName>fase3_cap7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usuario" id="19DA3AB2-B138-CC93-E002-481A615ADC44">
+<createdBy>arcne</createdBy>
+<createdTime>2024-04-30 18:52:47 UTC</createdTime>
+<ownerDesignName>fase3_cap7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="email" id="428ED652-95FC-6F4F-2707-49CC351D2852">
+<createdBy>arcne</createdBy>
+<createdTime>2024-04-30 18:52:47 UTC</createdTime>
+<ownerDesignName>fase3_cap7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="senha" id="84403A08-21E8-E685-271C-AF773464453D">
+<createdBy>arcne</createdBy>
+<createdTime>2024-04-30 18:52:47 UTC</createdTime>
+<ownerDesignName>fase3_cap7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="saldo" id="413ABF44-5ED5-3178-42A6-EEDD7F4DA0BC">
+<createdBy>arcne</createdBy>
+<createdTime>2024-04-30 18:52:47 UTC</createdTime>
+<ownerDesignName>fase3_cap7</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="E63667A7-3A25-FE16-8D5F-07CE1C255861" name="CONTA_PK">
+<createdBy>arcne</createdBy>
+<createdTime>2024-04-30 18:52:47 UTC</createdTime>
+<ownerDesignName>fase3_cap7</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="61109D33-5B6A-4979-5C97-E38FB5E07586"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
