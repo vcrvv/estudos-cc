@@ -1,101 +1,51 @@
-import java.util.ArrayList;
 import java.util.List;
+import java.util.ArrayList;
 
-public class Conta {
-    private int id;
-    private String numero;
-    private double saldo;
+
+public class Conta extends Cliente {
     private Cliente cliente;
+    private int idConta;
+    private double saldo;
+    private List<Investimento> investimentos = new ArrayList<>();
     private List<Transacao> transacoes = new ArrayList<>();
+    private List<Divida> dividas = new ArrayList<>();
 
 
-    // Getters e Setters
-    public Conta(int id, String numero, double saldo, Cliente cliente) {
-        this.id = id;
-        this.numero = numero;
-        this.saldo = saldo;
+    // Construtores
+    public Conta() {}
+
+    public Conta(Cliente cliente, int idConta, double saldo) {
         this.cliente = cliente;
-    }
-
-    // Getters e Setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(double saldo) {
+        this.idConta = idConta;
         this.saldo = saldo;
     }
 
-    public Cliente getCliente() {
-        return cliente;
-    }
+    // Getters e Setters
+    public int getIdConta() {return idConta;}
+    public void setIdConta(int idConta) {this.idConta = idConta;}
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
+    public Cliente getCliente() {return cliente;}
+    public void setCliente(Cliente cliente) {this.cliente = cliente;}
 
-    public List<Transacao> getTransacoes() {
-        return transacoes;
-    }
+    public double getSaldo() {return saldo;}
+    public void setSaldo(double saldo) {this.saldo = saldo;}
 
-    public void setTransacoes(List<Transacao> transacoes) {
-        this.transacoes = transacoes;
-    }
+    public List<Investimento> getInvestimentos() {return investimentos;}
+    public void setInvestimentos(List<Investimento> investimentos) {this.investimentos = investimentos;}
 
+    public List<Transacao> getTransacoes() {return transacoes;}
+    public void setTransacoes(List<Transacao> transacoes) {this.transacoes = transacoes;}
+
+    public List<Divida> getDividas() {return dividas;}
+    public void setDividas(List<Divida> dividas) {this.dividas = dividas;}
 
     // Métodos
-    public void adicionarTransacao(Transacao transacao) {
-        //
-        transacoes.add(transacao);
-        transacao.executar();
-        atualizarSaldo();
-    }
-
-    public void removerTransacao(Transacao transacao) {
-        //
-        transacoes.remove(transacao);
-        atualizarSaldo();
-    }
-
-    public void atualizarSaldo() {
-        saldo = 0;
-        for (Transacao transacao : transacoes) {
-            if (transacao instanceof Entrada) {
-                saldo += transacao.getValor();
-            } else if (transacao instanceof Saida) {
-                saldo -= transacao.getValor();
-            }
-        }
-    }
-
-    public void visualizarExtrato() {
-        System.out.println("Extrato da Conta " + numero);
-        for (Transacao transacao : transacoes) {
-            System.out.println(transacao);
-        }
-    }
-
     public void exibirConta() {
-        System.out.println(id);
-        System.out.println(numero);
-        System.out.println(saldo);
-        System.out.println(cliente);
+        // lógica do método
+        System.out.println("Exibindo dados");
     }
+
+    
+
     
 }

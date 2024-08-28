@@ -1,53 +1,46 @@
-import java.util.Date;
+import java.time.LocalDateTime;
 
 public abstract class Investimento {
-    private int id;
+    private int idInvestimento;
     private String nome;
     private double valorInvestido;
-    private Date dataInvestimento;
+    private double taxa;
+    private int tempoInvestimento;
+    private LocalDateTime data;
+    
 
+    // Construtores
+    public Investimento(int idInvestimento, String nome, double valorInvestido, double taxa, int tempoInvestimento, LocalDateTime data) {
+        this.idInvestimento = idInvestimento;
+        this.nome = nome;
+        this.taxa = taxa;
+        this.valorInvestido = valorInvestido;
+        this.tempoInvestimento = tempoInvestimento;
+        this.data = data;
+    }
 
     // Getters e Setters
-    public int getId() {
-        return id;
-    }
+    public int getIdInvestimento() {return idInvestimento;}
+    public void setIdInvestimento(int idInvestimento) {this.idInvestimento = idInvestimento;}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+    public String getNome() {return nome;}
+    public void setNome(String nome) {this.nome = nome;}
 
-    public String getNome() {
-        return nome;
-    }
+    public double getValorInvestido() {return valorInvestido;}
+    public void setValorInvestido(double valorInvestido) {this.valorInvestido = valorInvestido;}
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
+    public double getTaxa() {return taxa;}
+    public void setTaxa(double taxa) {this.taxa = taxa;}
 
-    public double getValorInvestido() {
-        return valorInvestido;
-    }
+    public int getTempoInvestimento() {return tempoInvestimento;}
+    public void setTempoInvestimento(int tempoInvestimento) {this.tempoInvestimento = tempoInvestimento;}
 
-    public void setValorInvestido(double valorInvestido) {
-        this.valorInvestido = valorInvestido;
-    }
+    public LocalDateTime getData() {return data;}
+    public void setData(LocalDateTime data) {this.data = data;}
 
-    public Date getDataInvestimento() {
-        return dataInvestimento;
-    }
-
-    public void setDataInvestimento(Date dataInvestimento) {
-        this.dataInvestimento = dataInvestimento;
-    }
 
     // Métodos
-    public Investimento(int id, String nome, double valorInvestido, Date dataInvestimento) {
-        this.id = id;
-        this.nome = nome;
-        this.valorInvestido = valorInvestido;
-        this.dataInvestimento = dataInvestimento;
-    }
-
     public abstract double calcularRendimento();
 
+    
 }

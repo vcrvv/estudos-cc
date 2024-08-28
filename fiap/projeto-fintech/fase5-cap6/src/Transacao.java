@@ -25,7 +25,6 @@ public class Transacao {
     public double getValor() {
         return valor;
     }
-
     public void setValor(double valor) {
         this.valor = valor;
     }
@@ -33,7 +32,6 @@ public class Transacao {
     public String getMetodo() {
         return metodo;
     }
-
     public void setMetodo(String metodo) {
         this.metodo = metodo;
     }
@@ -41,7 +39,6 @@ public class Transacao {
     public String getTipo() {
         return tipo;
     }
-
     public void setTipo(String tipo) {
         this.tipo = tipo;
     }
@@ -49,7 +46,6 @@ public class Transacao {
     public String getTitulo() {
         return titulo;
     }
-
     public void setTitulo(String titulo) {
         this.titulo = titulo;
     }
@@ -57,7 +53,6 @@ public class Transacao {
     public String getDescricao() {
         return descricao;
     }
-
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
@@ -65,7 +60,6 @@ public class Transacao {
     public String getData() {
         return data;
     }
-
     public void setData(String data) {
         this.data = data;
     }
@@ -73,7 +67,6 @@ public class Transacao {
     public int getIdOutraConta() {
         return idOutraConta;
     }
-
     public void setIdOutraConta(int idOutraConta) {
         this.idOutraConta = idOutraConta;
     }

@@ -17,7 +17,6 @@ public class Conta {
     public int getNumeroConta() {
         return numeroConta;
     }
-
     public void setNumeroConta(int numeroConta) {
         this.numeroConta = numeroConta;
     }
@@ -25,7 +24,6 @@ public class Conta {
     public int getIdCliente() {
         return idCliente;
     }
-
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
     }
@@ -33,7 +31,6 @@ public class Conta {
     public double getSaldo() {
         return saldo;
     }
-
     public void setSaldo(double saldo) {
         this.saldo = saldo;
     }

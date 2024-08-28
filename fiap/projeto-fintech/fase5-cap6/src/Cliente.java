@@ -24,7 +24,6 @@ public class Cliente {
     public int getIdCliente() {
         return idCliente;
     }
-
     public void setIdCliente(int idCliente) {
         this.idCliente = idCliente;
     } 
@@ -32,7 +31,6 @@ public class Cliente {
     public String getNome() {
         return nome;
     }
-
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -40,7 +38,6 @@ public class Cliente {
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
@@ -48,7 +45,6 @@ public class Cliente {
     public String getSenha() {
         return senha;
     }
-
     public void setSenha(String senha) {
         this.senha = senha;
     }
@@ -56,7 +52,6 @@ public class Cliente {
     public String getConfirmaSenha() {
         return confirmaSenha;
     }
-
     public void setConfirmaSenha(String confirmaSenha) {
         this.confirmaSenha = confirmaSenha;
     }
