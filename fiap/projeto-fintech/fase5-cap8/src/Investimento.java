@@ -40,7 +40,13 @@ public abstract class Investimento {
 
 
     // Métodos
-    public abstract double calcularRendimento();
+    public double calcularRendimentoSimples() {
+        // M = C * i * T
+        return getValorInvestido() * (1.00 + (getTaxa() / 100)) * getTempoInvestimento();
+    }
 
-    
+    public double calcularRendimentoComposto() {
+        return getValorInvestido() * (1.00 + (getTaxa() / 100)) * getTempoInvestimento();
+    }
 }
+

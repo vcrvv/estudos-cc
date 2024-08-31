@@ -15,11 +15,11 @@ def register(request):
         
         if password == password2:
             if User.objects.filter(email=email).exists():
-                messages.info(request, 'Email Already Used')
+                messages.info(request, 'Email já cadastrado')
                 return redirect('register')
             
             elif User.objects.filter(username=username).exists():
-                messages.info(request, 'Username Already Used')
+                messages.info(request, 'Nome de usúario já cadastrado')
                 return redirect('register')
             
             else:
@@ -27,7 +27,7 @@ def register(request):
                 user.save()
                 return redirect('login')
         else:
-            messages.info(request, 'Password Not The Same')
+            messages.info(request, 'Senhas incompatíveis')
             return redirect('register')
     else:
         return render(request, 'register.html')
@@ -45,7 +45,7 @@ def login(request):
             return redirect('/')
         
         else:
-            messages.info(request, 'Credentials Invalid')
+            messages.info(request, 'Credenciais inválidas')
             return redirect('login')
         
     else:    

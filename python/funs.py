@@ -1,4 +1,4 @@
- 
+
 set_a: set[int] = {1, 2, 3, 4, 5}
 set_b: set[int] = {4, 5, 8, 9, 10}
 
@@ -7,9 +7,7 @@ print(set_a - set_b)
 print(set_b & set_b)
 print(set_b ^ set_b)
  
-
 print(nome:=input("Nome: ") or "N/A")
-
  
 old = ['a', 'b', 'a', 'c', 'b']
 new = []

@@ -1,34 +1,38 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <style>
-        h5 {
-            color: rgb(255, 72, 0);
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 <body>
-    <h1>Sign Up Below</h1>
+    <div class="container">
+        <input type="checkbox" id="check">
+        <div class="login form">
 
-    {% for message in messages %}
-        <h5>{{ message }}</h5>
-    {% endfor %}
-    
-    <form method="POST" action="register">
-        {% csrf_token %}
-        <p>Username:</p>
-        <input type="text" name="username"/>
-        <p>Email:</p>
-        <input type="email" name="email"/>
-        <p>Password:</p>
-        <input type="password" name="password"/>
-        <p> Repeat Password:</p>
-        <input type="password" name="password2"/>
-        <br>
-        <input type="submit"/>
-    </form>
+        {% for message in messages %}
+            <h5>{{ message }}</h5>
+        {% endfor %}
+        
+            <div class="registration form">
+                <header>Cadastrar</header>
+                <form method="POST" action="register">
+                    {% csrf_token %}
+                    <input type="text" name="username" placeholder="Nome">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Senha">
+                    <input type="password" name="password2" placeholder="Confirmar Senha">
+                    <input type="submit" class="button" value="Cadastrar">
+                </form>
+                <div class="signup">
+                    <span class="signup">Já tem uma conta?
+                        <label for="check">Entrar</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

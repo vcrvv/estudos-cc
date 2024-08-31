@@ -84,12 +84,5 @@ public class Conta extends Cliente {
             System.out.println(transacao);
         }
     }
-
-    public void exibirConta() {
-        System.out.println(id);
-        System.out.println(numero);
-        System.out.println(saldo);
-        System.out.println(cliente);
-    }
     
 }
