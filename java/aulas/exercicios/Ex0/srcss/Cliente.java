@@ -1,19 +1,19 @@
 import java.util.ArrayList;
-
+import java.util.List;
 
 public class Cliente {
-    private int idCliente;
+    private int id;
     private String nome;
     private String email;
     private String telefone;
     private String senha;
-    private ArrayList<Conta> contas = new ArrayList<>();
+    private List<Conta> contas = new ArrayList<>();
 
     // Construtores
-    public Cliente () {}
+    public Cliente() {}
 
-    public Cliente(int idCliente, String nome, String email, String telefone, String senha) {
-        this.idCliente = idCliente;
+    public Cliente(int id, String nome, String email, String telefone, String senha) {
+        this.id = id;
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
@@ -21,12 +21,12 @@ public class Cliente {
     }
 
     // Getters e Setters
-    public int getIdCliente() {
-        return idCliente;
+    public int getId() {
+        return id;
     }
 
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -61,15 +61,16 @@ public class Cliente {
         this.senha = senha;
     }
 
-    public ArrayList<Conta> getContas() {
+    public List<Conta> getContas() {
         return contas;
     }
 
-    public void setContas(ArrayList<Conta> contas) {
+    public void setContas(List<Conta> contas) {
         this.contas = contas;
     }
 
-    // Métodos
+
+    // Métodos 
     public Conta abrirConta(String numero, double saldo) {
         Conta novaConta = new Conta(gerarNovoId(), numero, saldo, this);
         contas.add(novaConta);
@@ -80,22 +81,23 @@ public class Cliente {
         return contas.size() + 1;
     }
 
-    public void exibirCadastro() {
-        System.out.println("Informações da Conta: ");
-        System.out.println("Id do Cliente: " + idCliente);
+    public void fecharConta(Conta conta) {
+        contas.remove(conta);
+    }
+
+    public void visualizarExtrato() {
+        for (Conta conta : contas) {
+            conta.visualizarExtrato();
+        }
+    }
+
+    public void visualizarCadastro() {
+        System.out.println("=======Cliente=======");
+        System.out.println("Id: " + id);
         System.out.println("Nome: " + nome);
         System.out.println("E-Mail: " + email);
         System.out.println("Telefone: " + telefone);
         System.out.println("Senha: " + senha);
-
-        if (contas.size() == 0) {
-            System.out.println("Nenhuma conta cadastrada.");
-        } else {
-            System.out.println("Contas associadas: ");
-            for (Conta conta : contas) {
-                System.out.println("Número da conta: " + conta.getNumero());
-            }
-        }
     }
 
 }

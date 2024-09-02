@@ -1,4 +1,5 @@
 package br.com.fiap.model;
+
 public class Aluno {
     private int rm;
     private String nome;
@@ -10,7 +11,8 @@ public class Aluno {
         this.endereco = endereco;
     }
 
-    public Aluno() {}
+    public Aluno() {
+    }
 
     public int getRm() {
         return rm;
@@ -36,5 +38,4 @@ public class Aluno {
         this.endereco = endereco;
     }
 
-    
 }

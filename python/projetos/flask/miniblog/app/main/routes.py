@@ -1,14 +1,14 @@
 from datetime import datetime, timezone
+import sqlalchemy as sa
+
 from flask import render_template, flash, redirect, url_for, request, g, current_app
 from flask_login import current_user, login_required
 from flask_babel import _, get_locale
-import sqlalchemy as sa
-from langdetect import detect, LangDetectException
+
 from app import db
+from app.main import bp
 from app.main.forms import EditProfileForm, EmptyForm, PostForm, SearchForm, MessageForm
 from app.models import User, Post, Message, Notification
-from app.translate import translate
-from app.main import bp
 
 
 @bp.before_app_request
@@ -147,13 +147,6 @@ def unfollow(username):
         return redirect(url_for('main.index'))
 
 
-@bp.route('/translate', methods=['POST'])
-@login_required
-def translate_text():
-    data = request.get_json()
-    return {'text': translate(data['text'], data['source_language'], data['dest_language'])}
-
-
 @bp.route('/search')
 @login_required
 def search():
@@ -214,13 +207,3 @@ def notifications():
         'timestamp': n.timestamp
     } for n in notifications]
     
-
-@bp.route('/export_posts')
-@login_required
-def export_posts():
-    if current_user.get_task_in_progress('export_posts'):
-        flash(_('An export task is currently in progress'))
-    else:
-        current_user.launch_task('export_posts', _('Exporting posts...'))
-        db.session.commit()
-    return redirect(url_for('main.user', username=current_user.username))

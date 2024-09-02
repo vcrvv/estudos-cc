@@ -1,31 +1,27 @@
-import java.time.LocalDateTime;
-
 public abstract class Investimento {
-    private int idInvestimento;
+    private int id;
     private String nome;
     private double valorInvestido;
     private double taxa;
     private int tempoInvestimento;
-    private LocalDateTime data;
+    
 
     // Construtores
-    public Investimento(int idInvestimento, String nome, double valorInvestido, double taxa, int tempoInvestimento,
-            LocalDateTime data) {
-        this.idInvestimento = idInvestimento;
+    public Investimento(int id, String nome, double valorInvestido, double taxa, int tempoInvestimento) {
+        this.id = id;
         this.nome = nome;
         this.taxa = taxa;
         this.valorInvestido = valorInvestido;
         this.tempoInvestimento = tempoInvestimento;
-        this.data = data;
     }
 
     // Getters e Setters
-    public int getIdInvestimento() {
-        return idInvestimento;
+    public int getId() {
+        return id;
     }
 
-    public void setIdInvestimento(int idInvestimento) {
-        this.idInvestimento = idInvestimento;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -60,21 +56,7 @@ public abstract class Investimento {
         this.tempoInvestimento = tempoInvestimento;
     }
 
-    public LocalDateTime getData() {
-        return data;
-    }
-
-    public void setData(LocalDateTime data) {
-        this.data = data;
-    }
-
     // Métodos
-    public double calcularRendimentoSimples() {
-        // M = C * i * T
-        return getValorInvestido() * (1.00 + (getTaxa() / 100)) * getTempoInvestimento();
-    }
+    public abstract double calcularRendimento();
 
-    public double calcularRendimentoComposto() {
-        return getValorInvestido() * (1.00 + (getTaxa() / 100)) * getTempoInvestimento();
-    }
 }

@@ -16,11 +16,11 @@ public class ViewAluno {
             System.out.println("Escolha:\n1-Cadastrar Aluno\n2-Exibir Aluno\n0-Sair");
             op = sc.nextInt();
 
-            switch (op){
+            switch (op) {
                 case 1:
                     System.out.println("Qual o nome do aluno?");
                     String nome = sc.next() + sc.nextLine();
-                    
+
                     System.out.println("Qual o RM?");
                     int rm = sc.nextInt();
 
@@ -45,14 +45,16 @@ public class ViewAluno {
                     aluno.setNome(nome);
                     aluno.setRm(rm);
                     aluno.setEndereco(endereco);
-                    
+
                     System.out.println("Aluno registrado!");
                     break;
 
                 case 2:
                     System.out.println(aluno.getNome() + ", rm: " + aluno.getRm());
-                    System.out.println(aluno.getEndereco().getLogradouro() + ", " + aluno.getEndereco().getNumero() + ", CEP: " + aluno.getEndereco().getCep());
-                    System.out.println(aluno.getEndereco().getCidade().getNome() + "/" + aluno.getEndereco().getCidade().getEstado());
+                    System.out.println(aluno.getEndereco().getLogradouro() + ", " + aluno.getEndereco().getNumero()
+                            + ", CEP: " + aluno.getEndereco().getCep());
+                    System.out.println(aluno.getEndereco().getCidade().getNome() + "/"
+                            + aluno.getEndereco().getCidade().getEstado());
 
                 case 0:
                     System.out.println("Finalizando o sistema");
@@ -62,7 +64,7 @@ public class ViewAluno {
                     System.out.println("Opção inválida");
             }
 
-        }while (op != 0);
+        } while (op != 0);
 
         sc.close();
 

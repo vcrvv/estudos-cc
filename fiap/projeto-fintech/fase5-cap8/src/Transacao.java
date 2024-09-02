@@ -9,9 +9,9 @@ public abstract class Transacao {
     private int idOutraConta; // quem vai "receber" ou "pagar"
     private LocalDateTime data;
 
-
     // Construtores
-    public Transacao(double valor, String metodo, String tipo, String titulo, String descricao, LocalDateTime data, int idOutraConta) {
+    public Transacao(double valor, String metodo, String tipo, String titulo, String descricao, LocalDateTime data,
+            int idOutraConta) {
         this.valor = valor;
         this.metodo = metodo;
         this.tipo = tipo;
@@ -20,31 +20,65 @@ public abstract class Transacao {
         this.data = data;
         this.idOutraConta = idOutraConta;
     }
-   
+
     // Getters e Setters
-    public double getValor() {return valor;}
-    public void setValor(double valor) {this.valor = valor;}
+    public double getValor() {
+        return valor;
+    }
 
-    public String getMetodo() {return metodo;}
-    public void setMetodo(String metodo) {this.metodo = metodo;}
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
 
-    public String getTipo() {return tipo;}
-    public void setTipo(String tipo) {this.tipo = tipo;}
+    public String getMetodo() {
+        return metodo;
+    }
 
-    public String getTitulo() {return titulo;}
-    public void setTitulo(String titulo) {this.titulo = titulo;}
+    public void setMetodo(String metodo) {
+        this.metodo = metodo;
+    }
 
-    public String getDescricao() {return descricao;}
-    public void setDescricao(String descricao) {this.descricao = descricao;}
+    public String getTipo() {
+        return tipo;
+    }
 
-    public LocalDateTime getData() {return data;}
-    public void setData(LocalDateTime data) {this.data = data;}
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
-    public int getIdOutraConta() {return idOutraConta;}
-    public void setIdOutraConta(int idOutraConta) {this.idOutraConta = idOutraConta;}
+    public String getTitulo() {
+        return titulo;
+    }
 
-    
-    // Métodos    
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    public LocalDateTime getData() {
+        return data;
+    }
+
+    public void setData(LocalDateTime data) {
+        this.data = data;
+    }
+
+    public int getIdOutraConta() {
+        return idOutraConta;
+    }
+
+    public void setIdOutraConta(int idOutraConta) {
+        this.idOutraConta = idOutraConta;
+    }
+
+    // Métodos
     public void exibirHistoricoDeTransacoes() {
         // lógica
         System.out.println("Exibindo histórico");
@@ -56,7 +90,7 @@ public abstract class Transacao {
     }
 
     public void realizarPagamento() {
-        //  lógica
+        // lógica
         System.out.println("Pagamento cadastrado com sucesso!");
     }
 

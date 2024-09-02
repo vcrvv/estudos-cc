@@ -1,13 +1,20 @@
-import java.util.Scanner;
-
 public class App {
     public static void main(String[] args) {
         System.out.println("Projeto Fintech.");
 
-        Scanner leia = new Scanner(System.in);
+        Cliente cliente1 = new Cliente(
+            1, 
+            "Fulano",
+            "fulano@email.com",
+            "69988887777", 
+            "fulano123"
+        );
 
-        leia.close();
-        
+        cliente1.abrirConta("2222", 2000);
+        cliente1.abrirConta("3333", 2000);
+
+        cliente1.exibirCadastro();
+
 
     }
 

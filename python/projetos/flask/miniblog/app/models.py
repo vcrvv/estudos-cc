@@ -1,19 +1,20 @@
-from datetime import datetime, timezone, timedelta
-from hashlib import md5
 import json
-from time import time
-from typing import Optional
-import sqlalchemy as sa
-import sqlalchemy.orm as so
-from flask import current_app, url_for
-from flask_login import UserMixin
-from werkzeug.security import generate_password_hash, check_password_hash
 import jwt
 import redis
 import rq
 import secrets
-from app import db, login
+import sqlalchemy as sa
+import sqlalchemy.orm as so
 from app.search import add_to_index, remove_from_index, query_index
+from app import db, login
+from flask import current_app, url_for
+from flask_login import UserMixin
+from datetime import datetime, timezone, timedelta
+from hashlib import md5
+from time import time
+from typing import Optional
+from werkzeug.security import generate_password_hash, check_password_hash
+
 
 
 class SearchableMixin:
@@ -117,7 +118,6 @@ class User(PaginatedAPIMixin ,UserMixin, db.Model):
         foreign_keys='Message.recipient_id', back_populates='recipient')
     notifications: so.WriteOnlyMapped['Notification'] = so.relationship(
         back_populates='user')
-    tasks: so.WriteOnlyMapped['Task'] = so.relationship(back_populates='user')
     token: so.Mapped[Optional[str]] = so.mapped_column(
         sa.String(32), index=True, unique=True)
     token_expiration: so.Mapped[Optional[datetime]]
@@ -281,7 +281,6 @@ class Post(SearchableMixin, db.Model):
     body: so.Mapped[str] = so.mapped_column(sa.String(140))
     timestamp: so.Mapped[datetime] = so.mapped_column(index=True, default=lambda: datetime.now(timezone.utc))
     user_id: so.Mapped[int] = so.mapped_column(sa.ForeignKey(User.id), index=True)
-    language: so.Mapped[Optional[str]] = so.mapped_column(sa.String(5))
     author: so.Mapped[User] = so.relationship(back_populates='posts')
 
     def __repr__(self):
@@ -337,3 +336,5 @@ class Task(db.Model):
     def get_progress(self):
         job = self.get_rq_job()
         return job.meta.get('progress', 0) if job is not None else 100
+    
+    

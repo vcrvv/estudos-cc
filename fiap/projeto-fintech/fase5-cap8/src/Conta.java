@@ -1,51 +1,89 @@
-import java.util.List;
 import java.util.ArrayList;
 
-
 public class Conta extends Cliente {
-    private Cliente cliente;
     private int idConta;
+    private String numero;
     private double saldo;
-    private List<Investimento> investimentos = new ArrayList<>();
-    private List<Transacao> transacoes = new ArrayList<>();
-    private List<Divida> dividas = new ArrayList<>();
+    private Cliente cliente;
+    private ArrayList<Investimento> investimentos = new ArrayList<>();
+    private ArrayList<Transacao> transacoes = new ArrayList<>();
+    private ArrayList<Divida> dividas = new ArrayList<>();
 
 
     // Construtores
-    public Conta() {}
-
-    public Conta(Cliente cliente, int idConta, double saldo) {
-        this.cliente = cliente;
+    public Conta(int idConta, String numero, double saldo, Cliente cliente) {
         this.idConta = idConta;
+        this.numero = numero;
         this.saldo = saldo;
+        this.cliente = cliente;
     }
 
     // Getters e Setters
-    public int getIdConta() {return idConta;}
-    public void setIdConta(int idConta) {this.idConta = idConta;}
+    public int getIdConta() {
+        return idConta;
+    }
 
-    public Cliente getCliente() {return cliente;}
-    public void setCliente(Cliente cliente) {this.cliente = cliente;}
+    public void setIdConta(int idConta) {
+        this.idConta = idConta;
+    }
 
-    public double getSaldo() {return saldo;}
-    public void setSaldo(double saldo) {this.saldo = saldo;}
+    public double getSaldo() {
+        return saldo;
+    }
 
-    public List<Investimento> getInvestimentos() {return investimentos;}
-    public void setInvestimentos(List<Investimento> investimentos) {this.investimentos = investimentos;}
+    public void setSaldo(double saldo) {
+        this.saldo = saldo;
+    }
+    
+    public ArrayList<Investimento> getInvestimentos() {
+        return investimentos;
+    }
 
-    public List<Transacao> getTransacoes() {return transacoes;}
-    public void setTransacoes(List<Transacao> transacoes) {this.transacoes = transacoes;}
+    public void setInvestimentos(ArrayList<Investimento> investimentos) {
+        this.investimentos = investimentos;
+    }
 
-    public List<Divida> getDividas() {return dividas;}
-    public void setDividas(List<Divida> dividas) {this.dividas = dividas;}
+    public ArrayList<Transacao> getTransacoes() {
+        return transacoes;
+    }
 
+    public void setTransacoes(ArrayList<Transacao> transacoes) {
+        this.transacoes = transacoes;
+    }
+
+    public ArrayList<Divida> getDividas() {
+        return dividas;
+    }
+
+    public void setDividas(ArrayList<Divida> dividas) {
+        this.dividas = dividas;
+    }
+
+    public String getNumero() {
+        return numero;
+    }
+
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+   
     // Métodos
     public void exibirConta() {
         // lógica do método
         System.out.println("Exibindo dados");
     }
 
-    
+    //transações
 
-    
+    //investimentos
+
+    //dividas
 }
