@@ -32,7 +32,7 @@ class ListaMatriculaEstudante(generics.ListAPIView):
 
 class ListaMatriculaCurso(generics.ListAPIView):
     def get_queryset(self):
-        queryset = Curso.objects.filter(curso_id = self.kwargs['pk'])
+        queryset = Matricula.objects.filter(curso = self.kwargs['pk'])
         return queryset
     serializer_class = ListaMatriculasCursoSerializer
 
