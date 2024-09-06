@@ -1,24 +1,18 @@
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public abstract class Transacao {
     private double valor;
-    private String metodo; // pode ser "débito", "crédito", "boleto" ou "dinheito"
-    private String tipo; // pode ser "pagamento" ou "recebimento"
-    private String titulo;
+    private String metodo;
     private String descricao;
-    private int idOutraConta; // quem vai "receber" ou "pagar"
-    private LocalDateTime data;
+    private LocalDateTime dataHora;
 
     // Construtores
-    public Transacao(double valor, String metodo, String tipo, String titulo, String descricao, LocalDateTime data,
-            int idOutraConta) {
+    public Transacao(double valor, String metodo, String descricao) {
         this.valor = valor;
         this.metodo = metodo;
-        this.tipo = tipo;
-        this.titulo = titulo;
         this.descricao = descricao;
-        this.data = data;
-        this.idOutraConta = idOutraConta;
+        this.dataHora = LocalDateTime.now();
     }
 
     // Getters e Setters
@@ -38,22 +32,6 @@ public abstract class Transacao {
         this.metodo = metodo;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public String getDescricao() {
         return descricao;
     }
@@ -62,36 +40,18 @@ public abstract class Transacao {
         this.descricao = descricao;
     }
 
-    public LocalDateTime getData() {
-        return data;
-    }
-
-    public void setData(LocalDateTime data) {
-        this.data = data;
-    }
-
-    public int getIdOutraConta() {
-        return idOutraConta;
-    }
-
-    public void setIdOutraConta(int idOutraConta) {
-        this.idOutraConta = idOutraConta;
-    }
-
     // Métodos
-    public void exibirHistoricoDeTransacoes() {
-        // lógica
-        System.out.println("Exibindo histórico");
-    }
+    public abstract void aplicar(Conta conta);
 
-    public void realizarRecebimento() {
-        // lógica
-        System.out.println("Recebimento cadastrado com sucesso!");
-    }
+    @Override
+    public String toString() {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy-HH:mm");
+        String dataFormatada = dataHora.format(formatter);
 
-    public void realizarPagamento() {
-        // lógica
-        System.out.println("Pagamento cadastrado com sucesso!");
+        return "Data/Hora: " + dataFormatada +
+                ", Valor: " + valor +
+                ", Método: " + metodo +
+                ", Descrição: " + descricao;
     }
-
 }
+

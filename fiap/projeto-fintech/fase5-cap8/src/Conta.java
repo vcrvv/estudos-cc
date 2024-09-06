@@ -1,21 +1,24 @@
 import java.util.ArrayList;
-
-public class Conta extends Cliente {
+public class Conta {
     private int idConta;
     private String numero;
     private double saldo;
     private Cliente cliente;
-    private ArrayList<Investimento> investimentos = new ArrayList<>();
-    private ArrayList<Transacao> transacoes = new ArrayList<>();
-    private ArrayList<Divida> dividas = new ArrayList<>();
-
+    private ArrayList<Investimento> investimentos;
+    private ArrayList<Transacao> transacoes;
+    private ArrayList<Divida> dividas;
 
     // Construtores
+    public Conta() {}
+
     public Conta(int idConta, String numero, double saldo, Cliente cliente) {
         this.idConta = idConta;
         this.numero = numero;
         this.saldo = saldo;
         this.cliente = cliente;
+        this.investimentos = new ArrayList<>();
+        this.transacoes = new ArrayList<>();
+        this.dividas = new ArrayList<>();
     }
 
     // Getters e Setters
@@ -33,6 +36,22 @@ public class Conta extends Cliente {
 
     public void setSaldo(double saldo) {
         this.saldo = saldo;
+    }
+    
+    public String getNumero() {
+        return numero;
+    }
+    
+    public void setNumero(String numero) {
+        this.numero = numero;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
     
     public ArrayList<Investimento> getInvestimentos() {
@@ -59,31 +78,49 @@ public class Conta extends Cliente {
         this.dividas = dividas;
     }
 
-    public String getNumero() {
-        return numero;
-    }
-
-    public void setNumero(String numero) {
-        this.numero = numero;
-    }
-
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-   
     // Métodos
-    public void exibirConta() {
+    public void exibirSaldo() {
         // lógica do método
-        System.out.println("Exibindo dados");
+        System.out.println("Saldo: " + saldo);
+
     }
 
-    //transações
+    // transações
+    public void adicionarTransacao(Transacao transacao) {
+        transacoes.add(transacao);
+        transacao.aplicar(this);
+    }
 
-    //investimentos
+    public void exibirTransacoes() {
+        if (transacoes.isEmpty()) {
+            System.out.println("Nenhuma transação registrada.");
+        } else {
+            System.out.println("Histórico de Transações:");
+            for (Transacao transacao : transacoes) {
+                System.out.println(transacao);
+            }
+        }
+    }
 
-    //dividas
+    // investimentos
+    public void exibirInvestimentos() {
+        if (investimentos.isEmpty()) {
+            System.out.println("Nenhum investimento registrado");
+        } else {
+            System.out.println("Histórico de investimentos:");
+            for (Investimento investimento : investimentos) {
+                System.out.println(investimento);
+            }
+
+        }
+    }
+
+    // dividas
+    public void exibirDividas() {
+        if (dividas.isEmpty()) {
+            System.out.println("Nenhuma dívida registrada");
+        } else {
+            System.out.println("Historico");
+        }
+    }
 }

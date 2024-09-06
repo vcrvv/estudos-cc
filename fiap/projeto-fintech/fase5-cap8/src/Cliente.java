@@ -1,5 +1,4 @@
-import java.util.ArrayList;
-
+import java.util.HashMap;
 
 public class Cliente {
     private int idCliente;
@@ -7,10 +6,11 @@ public class Cliente {
     private String email;
     private String telefone;
     private String senha;
-    private ArrayList<Conta> contas = new ArrayList<>();
+    private HashMap<String, Conta> contas;
 
     // Construtores
-    public Cliente () {}
+    public Cliente() {
+    }
 
     public Cliente(int idCliente, String nome, String email, String telefone, String senha) {
         this.idCliente = idCliente;
@@ -18,6 +18,7 @@ public class Cliente {
         this.email = email;
         this.telefone = telefone;
         this.senha = senha;
+        this.contas = new HashMap<>();
     }
 
     // Getters e Setters
@@ -61,18 +62,10 @@ public class Cliente {
         this.senha = senha;
     }
 
-    public ArrayList<Conta> getContas() {
-        return contas;
-    }
-
-    public void setContas(ArrayList<Conta> contas) {
-        this.contas = contas;
-    }
-
     // Métodos
     public Conta abrirConta(String numero, double saldo) {
         Conta novaConta = new Conta(gerarNovoId(), numero, saldo, this);
-        contas.add(novaConta);
+        contas.put(numero, novaConta);
         return novaConta;
     }
 
@@ -80,8 +73,18 @@ public class Cliente {
         return contas.size() + 1;
     }
 
+    public Conta getContaPorNumero(String numero) {
+        Conta conta = contas.get(numero);
+        if (conta != null) {
+            return conta;
+        } else {
+            System.out.println("Conta com número " + numero + " não encontrada.");
+            return null;
+        }
+    }
+
     public void exibirCadastro() {
-        System.out.println("Informações da Conta: ");
+        System.out.println("========Visão Geral========");
         System.out.println("Id do Cliente: " + idCliente);
         System.out.println("Nome: " + nome);
         System.out.println("E-Mail: " + email);
@@ -92,10 +95,11 @@ public class Cliente {
             System.out.println("Nenhuma conta cadastrada.");
         } else {
             System.out.println("Contas associadas: ");
-            for (Conta conta : contas) {
-                System.out.println("Número da conta: " + conta.getNumero());
+            for (String numero : contas.keySet()) {
+                System.out.println("  Número - " + numero);
             }
         }
+        System.out.println("===========================");
     }
 
 }

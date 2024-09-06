@@ -2,21 +2,21 @@ import java.time.LocalDateTime;
 
 public abstract class Investimento {
     private int idInvestimento;
-    private String nome;
+    private String titulo;
     private double valorInvestido;
     private double taxa;
     private int tempoInvestimento;
     private LocalDateTime data;
 
     // Construtores
-    public Investimento(int idInvestimento, String nome, double valorInvestido, double taxa, int tempoInvestimento,
-            LocalDateTime data) {
+    public Investimento(int idInvestimento, String titulo, double valorInvestido, double taxa,
+            int tempoInvestimento) {
         this.idInvestimento = idInvestimento;
-        this.nome = nome;
-        this.taxa = taxa;
+        this.titulo = titulo;
         this.valorInvestido = valorInvestido;
+        this.taxa = taxa;
         this.tempoInvestimento = tempoInvestimento;
-        this.data = data;
+        this.data = LocalDateTime.now();
     }
 
     // Getters e Setters
@@ -29,11 +29,11 @@ public abstract class Investimento {
     }
 
     public String getNome() {
-        return nome;
+        return titulo;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNome(String titulo) {
+        this.titulo = titulo;
     }
 
     public double getValorInvestido() {
@@ -69,12 +69,16 @@ public abstract class Investimento {
     }
 
     // Métodos
-    public double calcularRendimentoSimples() {
-        // M = C * i * T
-        return getValorInvestido() * (1.00 + (getTaxa() / 100)) * getTempoInvestimento();
+    public void calcularRendimentoSimples() {
+        // M = P * (1 + r * t)
+        // J = P * r * t
+        // lógica
+        System.out.println("Investimento registrado com sucesso!");
     }
 
-    public double calcularRendimentoComposto() {
-        return getValorInvestido() * (1.00 + (getTaxa() / 100)) * getTempoInvestimento();
+    public void calcularRendimentoComposto() {
+        // lógica
+        // M = P * (1 + r) ** t
+        System.out.println("Investimento registrado com sucesso!");
     }
 }

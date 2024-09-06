@@ -4,14 +4,15 @@ public class Divida {
     private int idDivida;
     private double valor;
     private double taxa;
-    private LocalDate data;
+    private String dataDeVencimento;
+    private LocalDate dataAtual = LocalDate.now();
 
     // Construtores
-    public Divida(int idDivida, double valor, double taxa, LocalDate data) {
+    public Divida(int idDivida, double valor, double taxa, String dataDeVencimento) {
         this.idDivida = idDivida;
         this.valor = valor;
         this.taxa = taxa;
-        this.data = data;
+        this.dataDeVencimento = dataDeVencimento;
     }
 
     // Getters e Setters
@@ -39,13 +40,14 @@ public class Divida {
         this.taxa = taxa;
     }
 
-    public LocalDate getData() {
-        return data;
+    public String getDataDeVencimento() {
+        return dataDeVencimento;
     }
 
-    public void setData(LocalDate data) {
-        this.data = data;
+    public void setDataDeVencimento(String dataDeVencimento) {
+        this.dataDeVencimento = dataDeVencimento;
     }
+
 
     // Métodos
     public void cadastrarDivida() {
