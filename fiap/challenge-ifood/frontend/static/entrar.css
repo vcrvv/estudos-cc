@@ -1,0 +1,75 @@
+@import url("/usr/share/fonts/roboto/stylesheet.css");
+
+* {
+    font-family: 'iFood RC Textos', sans-serif;
+}
+
+html,body {
+    font-size: 14px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f9fb;
+    height: 100%;
+}
+
+.card.fat {
+    padding: 40px;
+    width: 400px;
+    border-color: transparent;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    color: #EA1D2C;
+}
+
+.card-body  p {
+    color: #3E3E3E;
+}
+
+.form-group-sm label {
+    width: 100%;
+} 
+
+.form-group-sm .form-control {
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    margin-top: 2px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 38px;
+}
+
+.btn.btn-block {
+    width: 100%;
+    color: white;
+    background-color: #EA1D2C;
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    height: 45px;
+}
+
+.btn.btn-block:hover {
+    background-color: #EE4C58;
+}
+
+
+@media screen and (max-width: 425px) {
+    .card-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card.fat {
+        padding: 0;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+}
