@@ -4,14 +4,13 @@
     font-family: 'iFood RC Textos', sans-serif;
 }
 
-html,body {
+html, body {
     font-size: 14px;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #f7f9fb;
-    height: 100%;
 }
 
 .card.fat {

@@ -7,9 +7,9 @@
     font-family: 'iFood RC Textos', sans-serif;
 }
 
-body{
+body {
     font-size: 14px;
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -109,19 +109,18 @@ form.secActive .form.first {
     margin: 2px 0px 4px 0px;
 }
 
-.input-field input :focus,
-.input-field select:focus{
+.input-field input :focus, .input-field select:focus{
     box-shadow: 0 3px 6px rgba(0,0,0,0.13);
 }
 
-.input-field select,
-.input-field input[type="date"]{
+.input-field select, .input-field input[type="date"]{
     color: #707070;
 }
 
 .input-field input[type="date"]:valid{
     color: #333;
 }
+
 .container form button, .backBtn{
     display: flex;
     align-items: center;
@@ -147,8 +146,7 @@ form button:hover{
     background-color: #EE4C58;
 }
 
-form button i,
-form .backBtn i{
+form button i, form .backBtn i{
     margin: 0 6px;
 }
 

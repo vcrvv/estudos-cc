@@ -11,12 +11,14 @@ def index(request, id):
     if ls in request.user.listatarefa.all():
         if request.method == 'POST':
             print(request.POST)
+            
             if request.POST.get("salvar"):
                 for item in ls.item_set.all():
                     if request.POST.get("c" + str(item.id)) == 'clicado':
                         item.completo = True
                     else:
                         item.completo = False
+                        
                     item.save()
                     
             elif request.POST.get('novoItem'):
