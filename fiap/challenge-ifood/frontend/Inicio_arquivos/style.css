@@ -1,0 +1,334 @@
+@import url("/usr/share/fonts/roboto/stylesheet.css");
+
+* {
+  font-family: "iFood RC Textos", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: #f7f9fb;
+}
+
+.navbar {
+  background-color: #ea1d2c;
+}
+
+.navbar .container {
+  max-width: 76vw;
+}
+
+.navbar-brand {
+  margin-right: 12px;
+}
+
+.logo .navbar-brand img {
+  height: 42px;
+}
+
+.headerProfile {
+  display: flex;
+  align-items: baseline;
+  color: white;
+  font-weight: bold;
+}
+
+.headerProfile .navbar-brand img {
+  height: 34px;
+}
+
+.card-title {
+  color: #ea1d2c;
+}
+
+.formulario {
+  border-radius: 6px;
+  padding: 30px;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a > p {
+  display: flex;
+  align-items: baseline;
+  color: white;
+  font-weight: bold;
+}
+
+a > p:hover {
+  font-weight: 900;
+}
+
+button {
+  height: 38px;
+  max-width: 162px;
+  width: 100%;
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #ea1d2c;
+  border-radius: 5px;
+  margin: 25px 0;
+  font-weight: bold;
+}
+
+#botao {
+  margin: 0px 0px 0px 8px;
+}
+
+.button:hover {
+  background-color: #ee4c58;
+}
+
+#linkinicio {
+  margin-right: 26px;
+}
+
+#navbarContent {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+#cardizinho {
+  margin: 10px;
+  border-radius: 6px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 20px;
+}
+
+.cardizinho-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cardizinho-texto {
+  align-content: center;
+}
+
+#cardizao {
+  height: 280px;
+  width: 50%;
+  margin: 10px;
+  padding: 0px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: calc(1rem + 1.5vw);
+}
+
+h5 {
+  font-size: calc(0.7rem + 0.5vw);
+  margin: 0px;
+}
+
+#inputBusca {
+  height: 38px;
+  max-width: 260px;
+  padding: 10px 10px 10px 40px;
+}
+
+.table-container {
+  overflow-x: auto;
+  font-size: smaller;
+  min-width: 700px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 4px 4px 4px 6px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tbody tr {
+  border-bottom: 1px solid #ccc;
+}
+
+.container form .fields {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  margin: 4px 14px 4px 0px;
+  width: 48%;
+}
+
+.input-field input,
+select {
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+  color: #333;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  height: 39px;
+  margin: 2px 0px 4px 0px;
+}
+
+.input-field input :focus,
+.input-field select:focus {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.13);
+}
+
+.input-field select,
+.input-field input[type="date"] {
+  color: #707070;
+}
+
+.input-field input[type="date"]:valid {
+  color: #333;
+}
+
+#cardizao-header {
+  padding: 7px;
+  justify-content: space-between;
+  font-size: small;
+  display: flex;
+}
+
+#cardizao-header p {
+  margin: 0px;
+}
+
+#tabela-inicio {
+  overflow-x: auto;
+  font-size: xx-small;
+  height: 100%;
+}
+
+canvas {
+  width: 408px;
+  height: 280px;
+  margin: auto;
+}
+
+@media (min-width: 570px) {
+  #linksair {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .container form {
+    overflow-y: scroll;
+  }
+  .container form::-webkit-scrollbar {
+    display: none;
+  }
+  .formulario {
+    overflow-y: scroll;
+  }
+  form .fields .input-field {
+    width: calc(100% / 2 - 15px);
+  }
+}
+
+@media (max-width: 570px) {
+  form .fields .input-field {
+    width: 100%;
+  }
+  .formulario {
+    overflow-y: scroll;
+  }
+
+  .headerProfile {
+    display: none;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  .navbar-nav .nav-item {
+    margin-bottom: 10px;
+  }
+
+  .navbar-nav .nav-link {
+    color: white;
+    font-weight: bold;
+  }
+
+  .navbar-nav .nav-link.active {
+    color: #ea1d2c;
+  }
+
+  .navbar-toggler {
+    display: block;
+    max-width: 56px;
+    margin: 2px 0px 2px 0px;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    margin-top: 10px;
+  }
+
+  a {
+    margin-right: 0px;
+  }
+
+  #cardizinho {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  .container > .container {
+    flex-direction: column;
+  }
+
+  #cardizao {
+    width: 100%;
+  }
+
+  #cardizao-header {
+    padding: 10px;
+  }
+
+  #cardsts {
+    align-items: center;
+  }
+
+  table {
+    font-size: smaller;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+}
