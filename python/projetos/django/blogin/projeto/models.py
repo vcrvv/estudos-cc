@@ -14,7 +14,7 @@ class Usuario(models.Model):
 
 class Nota(models.Model):
     id = models.AutoField(primary_key=True)
-    nome_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE, related_name='notas', null=True) 
+    nome_usuario = models.ForeignKey(Usuario, on_delete=models.CASCADE) 
     titulo = models.CharField(max_length=100, blank=True)
     nota = models.TextField()
     publicada = models.DateTimeField(auto_now_add=True)

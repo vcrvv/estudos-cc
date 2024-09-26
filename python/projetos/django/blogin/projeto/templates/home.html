@@ -11,7 +11,15 @@
 <body>
     <nav class="navbar body-tertiary">
         <div class="container-fluid"">
-            <a class="navbar-brand" href="#">Notas</a>
+            <h5 class="mb-0">Notas</h5>
+            <div>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'sair' %}">Sair</a>
+                {% else %}
+                    <a href="{% url 'login' %}">Logar</a>
+                    <a href="{% url 'register' %}">Cadastrar</a>
+                {% endif %}
+            </div>
         </div>
     </nav>
     <div class="principal">
@@ -20,30 +28,16 @@
                 <header>
                     <h4>Adicionar Nota</h4>
                 </header>
+                {% if messages %}
+                    {% for message in messages %}
+                        <p {% if message.tags %} class="{{ message.tags }}"{% endif %} style="font-size: small; color: red;">{{ message }}</p>
+                    {% endfor %}
+                {% endif %}
                 <form method="POST">
                     {% csrf_token %}
-
-                    <!-- <div class="form-floating mb-3">
-                        <label for="titulo">Titulo</label>
-                        <input name='titulo'type="text" class="form-control" required>
-                    </div> -->
-
-                    <div class="form-floating mb-3">
-                            {{ notasform.titulo }}
-                    </div>
-
-                    <!-- <div class="form-floating mb-3">
-                        <label for="nota">Nota</label>
-                        <textarea name="nota" class="form-control" required>
-                        </textarea>
-                    </div> -->
-
-                    <div class="form-floating mb-3">
-                            {{  notasform.nota }}
-                    </div>
-
+                    <div class="form-floating mb-3">{{ notasform.titulo }}</div>
+                    <div class="form-floating mb-3">{{  notasform.nota }}</div>
                     <button type="submit" class="btn btn-primary">Adicionar</button>
-
                 </form>
             </div>
 
@@ -54,15 +48,9 @@
                 <div class="notas-container">
                     {% for nota in notas %}
                     <div class="notaa">
-                        <p>
-                            <strong>{{ nota.nome_usuario }}</strong>  - {{ nota.publicada|date:"d/m/Y H:i" }}
-                        </p>
-                        <p>
-                            <strong>{{ nota.titulo }}</strong>
-                        </p> 
-                        <p>
-                            {{ nota.nota }}
-                        </p>   
+                        <p><strong>{{ nota.nome_usuario }}</strong>  - {{ nota.publicada|date:"d/m/Y H:i" }}</p>
+                        <p><strong>{{ nota.titulo }}</strong></p> 
+                        <p>{{ nota.nota }}</p>   
                     </div>
                     {% empty %}
                         <p>Nenhuma nota disponível.</p>

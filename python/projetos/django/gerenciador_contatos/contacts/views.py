@@ -5,6 +5,7 @@ def contact_list(request):
     contacts = Contact.objects.all()
     return render(request, 'contacts/contact_list.html', {'contacts': contacts})
 
+
 def contact_create(request):
     if request.method == 'POST':
         contact = Contact(name=request.POST['name'], email=request.POST['email'], phone=request.POST['phone'])

@@ -12,11 +12,29 @@ body {
 
 nav {
     background: var(--cor-janela);
+    height: 48px;
 }
 
 header {
     padding: 10px 0px 10px 0px;
 }
+
+h5 {
+    color: white;
+}
+
+a {
+    margin-left: 6px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    border-bottom: 3px solid white;
+    transition-duration: .1s;
+    padding-bottom: 4px;
+}
+
 
 .btn .btn-primary {
     color: var(--cor-texto);
@@ -62,3 +80,20 @@ header {
     font-size: 14px;
 }
 
+.caixa-texto {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+}
+
+.caixa-texto:focus {
+    outline: none;
+}
+
+
+.input-titulo::placeholder,
+.input-nota::placeholder {
+    color: #888;  
+}

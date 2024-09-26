@@ -1,8 +1,7 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponseRedirect
 from .models import *
 from .forms import *
-from django.contrib.auth.decorators import login_required
 
 
 def index(request, id):
