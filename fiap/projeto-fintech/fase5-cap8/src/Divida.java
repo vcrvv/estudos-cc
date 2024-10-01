@@ -48,7 +48,6 @@ public class Divida {
         this.dataDeVencimento = dataDeVencimento;
     }
 
-
     // Métodos
     public void cadastrarDivida() {
         // lógica

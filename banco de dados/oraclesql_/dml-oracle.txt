@@ -1,0 +1,20 @@
+inserção de dados
+
+INSERT INTO  <nome-tabela> 
+	[(<nome-coluna>, [<nome-coluna>],...)]
+VALUES 
+	(<conteúdo>, [<conteúdo>], ...);
+
+----------------------------------------
+atualização de dados
+
+INSERT INTO  <nome-tabela> 
+	[(<nome-coluna>, [<nome-coluna>],...)]
+VALUES 
+	(<conteúdo>, [<conteúdo>], ...);
+
+----------------------------------------
+exclusão de dados
+
+DELETE FROM  <nome-tabela>
+	[WHERE <condição>]
