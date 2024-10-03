@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="971DE171-28BE-59C9-1773-76D14E779148" name="DIVIDA">
+<createdBy>vvv</createdBy>
+<createdTime>2024-09-30 19:11:58 UTC</createdTime>
+<generatorID>3CA546EC-586C-C687-0E58-1B3DD1407E20</generatorID>
+<ownerDesignName>modelo_logico_fintech</ownerDesignName>
+<engineerTo>
+<item key="CB7A0551-5DBE-CA59-E8AD-BBD67F679CBD" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id divida" id="9289EE79-2015-48D3-EB0B-C00E8F294AAA">
+<createdBy>vvv</createdBy>
+<createdTime>2024-09-30 19:11:58 UTC</createdTime>
+<generatorID>E457F66C-A0EA-F7D2-96B5-3875F9304857</generatorID>
+<ownerDesignName>modelo_logico_fintech</ownerDesignName>
+<engineerTo>
+<item key="CB7A0551-5DBE-CA59-E8AD-BBD67F679CBD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="CONTA id conta" id="7189D278-4607-2958-0879-9BDA9A36C62D">
+<createdBy>vvv</createdBy>
+<createdTime>2024-09-30 19:11:58 UTC</createdTime>
+<generatorID>7E0BAFFC-89A0-51EC-B499-4F74616B7CED</generatorID>
+<ownerDesignName>modelo_logico_fintech</ownerDesignName>
+<engineerTo>
+<item key="CB7A0551-5DBE-CA59-E8AD-BBD67F679CBD" value="true"/>
+</engineerTo>
+<referedAttribute>2CA5CE84-D801-6C0E-4BA4-AA640FEDE31A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="valor inicial" id="04BC3886-238C-EC02-A2D3-5F7DF69C5100">
+<createdBy>vvv</createdBy>
+<createdTime>2024-09-30 19:11:58 UTC</createdTime>
+<generatorID>429712C9-C1FC-42BF-8A68-417CAD18551A</generatorID>
+<ownerDesignName>modelo_logico_fintech</ownerDesignName>
+<engineerTo>
+<item key="CB7A0551-5DBE-CA59-E8AD-BBD67F679CBD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="taxa" id="0135E962-2984-608F-7F4C-4BD0B3F70AA3">
+<createdBy>vvv</createdBy>
+<createdTime>2024-09-30 19:11:58 UTC</createdTime>
+<generatorID>F158F3B9-F46A-1819-2942-6CA59D4E00AA</generatorID>
+<ownerDesignName>modelo_logico_fintech</ownerDesignName>
+<engineerTo>
+<item key="CB7A0551-5DBE-CA59-E8AD-BBD67F679CBD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data divida" id="DFC45CD5-C85A-4F91-51D3-2E99F374BFFD">
+<createdBy>vvv</createdBy>
+<createdTime>2024-09-30 19:11:58 UTC</createdTime>
+<generatorID>2A4AEDD0-2A8B-1B3C-DAA0-3B4CF8BA876C</generatorID>
+<ownerDesignName>modelo_logico_fintech</ownerDesignName>
+<engineerTo>
+<item key="CB7A0551-5DBE-CA59-E8AD-BBD67F679CBD" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CE9EDA8E-958B-BDD1-C59C-339429FEE904" name="DIVIDA PK">
+<createdBy>vvv</createdBy>
+<createdTime>2024-09-30 19:11:58 UTC</createdTime>
+<generatorID>B56B4197-D528-279D-94D0-164C3E4E612F</generatorID>
+<ownerDesignName>modelo_logico_fintech</ownerDesignName>
+<engineerTo>
+<item key="CB7A0551-5DBE-CA59-E8AD-BBD67F679CBD" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9289EE79-2015-48D3-EB0B-C00E8F294AAA</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
