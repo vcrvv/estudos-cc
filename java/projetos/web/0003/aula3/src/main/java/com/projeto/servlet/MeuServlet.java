@@ -18,6 +18,7 @@ public class MeuServlet extends HttpServlet {
     HttpSession session = req.getSession();
     String x = "Hello, World!";
     out.println(x);
+    out.println(session);
     
     req.getRequestDispatcher("servlet.html").forward(req, resp);
   }

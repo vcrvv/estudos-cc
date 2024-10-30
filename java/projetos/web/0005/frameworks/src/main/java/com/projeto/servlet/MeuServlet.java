@@ -10,17 +10,13 @@ import jakarta.servlet.http.HttpSession;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/meu-servlet")
+@WebServlet("/servlet")
 public class MeuServlet extends HttpServlet {
   @Override
-  protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-    PrintWriter out = resp.getWriter();
-    HttpSession session = req.getSession();
-    String x = "Hello, World!";
-    out.println(x);
-    out.println(session);
-    
-    req.getRequestDispatcher("servlet.html").forward(req, resp);
+  protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    ArrayList<String> nomes = new ArrayList<String>();
+    nomes.add("Alexandre");
+    nomes.add("Carlos");
+    req.setAttribute("lista", nomes);
   }
 }
-
