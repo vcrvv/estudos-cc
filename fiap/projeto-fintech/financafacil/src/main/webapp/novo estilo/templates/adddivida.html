@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adicionar Divida</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../static/style.css" />
+  </head>
+  <body>
+    <nav class="navbar sticky-top navbar-expand-sm">
+      <div class="container">
+        <div class="logo">
+          <a class="navbar-brand" href="#">
+            <img src="../icones/Component 1 branco.svg" alt="logo finançafacil"/>
+          </a>
+        </div>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+          <a class="linkhist" href="inicio.html"><p>Inicio</p></a>
+          <a class="linkhist" href="transacoes.html"><p>Transações</p></a>
+          <a class="linkhist" href="investimentos.html"><p>Investimentos</p></a>
+          <a class="linkhist" href="dividas.html"><p>Dívidas</p></a>
+          <a class="linkhist" id="linksair" href="sair.html"><p>Sair</p></a>
+        </div>
+        
+        <div class="headerProfile d-lg-flex">
+          <p>User</p>
+          <a class="navbar-brand" href="#"
+            ><img src="../icones/usuario.svg" alt="Usuario"
+          /></a>
+          <a href="#"><p>Sair</p></a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3 d-flex justify-content-center align-items-center">
+      <div class="formulario">
+        <header>
+          <h2 class="card-title mb-0">Nova Divida</h2>
+          <p>Preencha os campos para adicionar</p>
+        </header>
+
+        <form method="post" action="#">
+          <div class="details personal">
+            <div class="fields">
+
+              <div class="input-field" style="width: 120px">
+                <label for="valor">Valor</label>
+                <input id="valor" type="number" placeholder="Valor" />
+              </div>
+
+              <div class="input-field" style="width: 120px">
+                <label for="taxa">Taxa</label>
+                <input id="taxa" type="number" placeholder="Taxa" />
+              </div>
+
+              <div class="input-field" style="width: 100%">
+                <label for="titulo">Titulo</label>
+                <input name="titulo" type="text" placeholder="Titulo" />
+              </div>
+
+              <div class="input-field">
+                <label>Data Inicial</label>
+                <input name="dataini" type="date" placeholder="Data Inicial" />
+              </div>
+
+              <div class="input-field">
+                <label>Data Final</label>
+                <input type="date" placeholder="Data Final" />
+              </div>
+            </div>
+          </div>
+
+          <button type="submit">
+            <span>Adicionar</span>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class InvestimentoDao {
     private Connection conexao;
 
@@ -20,41 +19,39 @@ public class InvestimentoDao {
     }
 
     public void insert(Investimento investimento) throws SQLException {
-        PreparedStatement stm = conexao.prepareStatement(
-                "INSERT INTO investimento (titulo, valor_investido, data_inicial, taxa, id_conta) VALUES (?, ?, ?, ?, ?)");
-        stm.setString(1, investimento.getTitulo());
-        stm.setDouble(2, investimento.getValorInvestido());
-        stm.setDate(3, java.sql.Date.valueOf(investimento.getDataInicial()));
-        stm.setDouble(4, investimento.getTaxa());
-        stm.setInt(5, investimento.getIdConta());
-        stm.executeUpdate();
+        String sql = "INSERT INTO investimento (titulo, valor_investido, data_inicial, taxa, id_conta) VALUES (?, ?, ?, ?, ?)";
+        try (PreparedStatement stm = conexao.prepareStatement(sql)) {
+            stm.setString(1, investimento.getTitulo());
+            stm.setDouble(2, investimento.getValorInvestido());
+            stm.setDate(3, java.sql.Date.valueOf(investimento.getDataInicial()));
+            stm.setDouble(4, investimento.getTaxa());
+            stm.setInt(5, investimento.getIdConta());
+            stm.executeUpdate();
+        }
     }
 
     public List<Investimento> getAll() throws SQLException {
-        PreparedStatement stm = conexao.prepareStatement("SELECT * FROM investimento");
-        ResultSet result = stm.executeQuery();
+        String sql = "SELECT * FROM investimento";
         List<Investimento> lista = new ArrayList<>();
-        while (result.next()) {
-            Investimento investimento = new Investimento();
-            investimento.setIdInvestimento(result.getInt("id_investimento"));
-            investimento.setTitulo(result.getString("titulo"));
-            investimento.setValorInvestido(result.getDouble("valor_investido"));
-            investimento.setDataInicial(result.getDate("data_inicial").toLocalDate());
-            investimento.setTaxa(result.getDouble("taxa"));
-            investimento.setIdConta(result.getInt("id_conta"));
-            lista.add(investimento);
+        try (PreparedStatement stm = conexao.prepareStatement(sql);
+             ResultSet result = stm.executeQuery()) {
+            while (result.next()) {
+                lista.add(parseInvestimento(result));
+            }
         }
         return lista;
     }
 
     public Investimento pesquisar(int idInvestimento) throws SQLException, EntidadeNaoEncontradaException {
-        PreparedStatement stm = conexao.prepareStatement("SELECT * FROM investimento WHERE id_investimento = ?");
-        stm.setInt(1, idInvestimento);
-        ResultSet result = stm.executeQuery();
-        if (!result.next()) {
-            throw new EntidadeNaoEncontradaException("Investimento não encontrado.");
+        String sql = "SELECT * FROM investimento WHERE id_investimento = ?";
+        try (PreparedStatement stm = conexao.prepareStatement(sql)) {
+            stm.setInt(1, idInvestimento);
+            ResultSet result = stm.executeQuery();
+            if (!result.next()) {
+                throw new EntidadeNaoEncontradaException("Investimento não encontrado.");
+            }
+            return parseInvestimento(result);
         }
-        return parseInvestimento(result);
     }
 
     private Investimento parseInvestimento(ResultSet result) throws SQLException {
@@ -69,27 +66,32 @@ public class InvestimentoDao {
     }
 
     public void atualizar(Investimento investimento) throws SQLException {
-        PreparedStatement stm = conexao.prepareStatement(
-                "UPDATE investimento SET titulo = ?, valor_investido = ?, data_inicial = ?, taxa = ?, id_conta = ? WHERE id_investimento = ?");
-        stm.setString(1, investimento.getTitulo());
-        stm.setDouble(2, investimento.getValorInvestido());
-        stm.setDate(3, java.sql.Date.valueOf(investimento.getDataInicial()));
-        stm.setDouble(4, investimento.getTaxa());
-        stm.setInt(5, investimento.getIdConta());
-        stm.setInt(6, investimento.getIdInvestimento());
-        stm.executeUpdate();
+        String sql = "UPDATE investimento SET titulo = ?, valor_investido = ?, data_inicial = ?, taxa = ?, id_conta = ? WHERE id_investimento = ?";
+        try (PreparedStatement stm = conexao.prepareStatement(sql)) {
+            stm.setString(1, investimento.getTitulo());
+            stm.setDouble(2, investimento.getValorInvestido());
+            stm.setDate(3, java.sql.Date.valueOf(investimento.getDataInicial()));
+            stm.setDouble(4, investimento.getTaxa());
+            stm.setInt(5, investimento.getIdConta());
+            stm.setInt(6, investimento.getIdInvestimento());
+            stm.executeUpdate();
+        }
     }
 
     public void remover(int idInvestimento) throws SQLException, EntidadeNaoEncontradaException {
-        PreparedStatement stm = conexao.prepareStatement("DELETE FROM investimento WHERE id_investimento = ?");
-        stm.setInt(1, idInvestimento);
-        int linhas = stm.executeUpdate();
-        if (linhas == 0) {
-            throw new EntidadeNaoEncontradaException("Investimento não encontrado para ser removido.");
+        String sql = "DELETE FROM investimento WHERE id_investimento = ?";
+        try (PreparedStatement stm = conexao.prepareStatement(sql)) {
+            stm.setInt(1, idInvestimento);
+            int linhas = stm.executeUpdate();
+            if (linhas == 0) {
+                throw new EntidadeNaoEncontradaException("Investimento não encontrado para ser removido.");
+            }
         }
     }
 
     public void fecharConexao() throws SQLException {
-        conexao.close();
+        if (conexao != null && !conexao.isClosed()) {
+            conexao.close();
+        }
     }
 }

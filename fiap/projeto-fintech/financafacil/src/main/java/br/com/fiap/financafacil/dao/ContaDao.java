@@ -11,7 +11,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-
 public class ContaDao {
     private Connection conexao;
 
@@ -20,34 +19,36 @@ public class ContaDao {
     }
 
     public void insert(Conta conta) throws SQLException {
-        PreparedStatement stm = conexao.prepareStatement("INSERT INTO conta (id_usuario, saldo) VALUES (?, ?)");
-        stm.setInt(1, conta.getIdUsuario());
-        stm.setDouble(2, conta.getSaldo());
-        stm.executeUpdate();
+        String sql = "INSERT INTO conta (id_usuario, saldo) VALUES (?, ?)";
+        try (PreparedStatement stm = conexao.prepareStatement(sql)) {
+            stm.setInt(1, conta.getIdUsuario());
+            stm.setDouble(2, conta.getSaldo());
+            stm.executeUpdate();
+        }
     }
-
+    
     public List<Conta> getAll() throws SQLException {
-        PreparedStatement stm = conexao.prepareStatement("SELECT * FROM conta;");
-        ResultSet result = stm.executeQuery();
+        String sql = "SELECT * FROM conta";
         List<Conta> lista = new ArrayList<>();
-        while (result.next()) {
-            Conta conta = new Conta();
-            conta.setIdConta(result.getInt("id_conta"));
-            conta.setSaldo(result.getDouble("saldo"));
-            conta.setIdUsuario(result.getInt("id_usuario"));
-            lista.add(conta);
+        try (PreparedStatement stm = conexao.prepareStatement(sql);
+             ResultSet result = stm.executeQuery()) {
+            while (result.next()) {
+                lista.add(parseConta(result));
+            }
         }
         return lista;
     }
-
+    
     public Conta pesquisar(int idConta) throws SQLException, EntidadeNaoEncontradaException {
-        PreparedStatement stm = conexao.prepareStatement("SELECT * FROM conta WHERE id_conta = ?");
-        stm.setInt(1, idConta);
-        ResultSet result = stm.executeQuery();
-        if (!result.next()) {
-            throw new EntidadeNaoEncontradaException("Conta não encontrada");
+        String sql = "SELECT * FROM conta WHERE id_conta = ?";
+        try (PreparedStatement stm = conexao.prepareStatement(sql)) {
+            stm.setInt(1, idConta);
+            ResultSet result = stm.executeQuery();
+            if (!result.next()) {
+                throw new EntidadeNaoEncontradaException("Conta não encontrada");
+            }
+            return parseConta(result);
         }
-        return parseConta(result);
     }
 
     private Conta parseConta(ResultSet result) throws SQLException {
@@ -59,24 +60,29 @@ public class ContaDao {
     }
 
     public void atualizar(Conta conta) throws SQLException {
-        PreparedStatement stm = conexao
-                .prepareStatement("UPDATE conta SET saldo = ?, id_usuario = ? WHERE id_conta = ?");
-        stm.setDouble(1, conta.getSaldo());
-        stm.setInt(2, conta.getIdUsuario());
-        stm.setInt(3, conta.getIdConta());
-        stm.executeUpdate();
+        String sql = "UPDATE conta SET saldo = ?, id_usuario = ? WHERE id_conta = ?";
+        try (PreparedStatement stm = conexao.prepareStatement(sql)) {
+            stm.setDouble(1, conta.getSaldo());
+            stm.setInt(2, conta.getIdUsuario());
+            stm.setInt(3, conta.getIdConta());
+            stm.executeUpdate();
+        }
     }
 
     public void remover(int idConta) throws SQLException, EntidadeNaoEncontradaException {
-        PreparedStatement stm = conexao.prepareStatement("DELETE FROM conta WHERE id_conta = ?");
-        stm.setInt(1, idConta);
-        int linhas = stm.executeUpdate();
-        if (linhas == 0) {
-            throw new EntidadeNaoEncontradaException("Conta não encontrada para ser removida");
+        String sql = "DELETE FROM conta WHERE id_conta = ?";
+        try (PreparedStatement stm = conexao.prepareStatement(sql)) {
+            stm.setInt(1, idConta);
+            int linhas = stm.executeUpdate();
+            if (linhas == 0) {
+                throw new EntidadeNaoEncontradaException("Conta não encontrada para ser removida");
+            }
         }
     }
 
     public void fecharConexao() throws SQLException {
-        conexao.close();
+        if (conexao != null && !conexao.isClosed()) {
+            conexao.close();
+        }
     }
 }
