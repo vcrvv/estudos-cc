@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelo_logico_fintech" id="9FE449A3-28A2-BE01-1360-99636588F0E7" version="3.5">
-<createdBy>arcne</createdBy>
-<createdTime>2024-04-30 17:10:09 UTC</createdTime>
-<ownerDesignName>fase3_cap7</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>9FE449A3-28A2-BE01-1360-99636588F0E7</designId>
-</OSDM_Design>
