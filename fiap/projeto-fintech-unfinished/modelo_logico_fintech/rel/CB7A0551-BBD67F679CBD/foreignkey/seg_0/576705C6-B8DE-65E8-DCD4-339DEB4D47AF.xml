@@ -1,0 +1,14 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="576705C6-B8DE-65E8-DCD4-339DEB4D47AF" containerWithKeyObject="4395CDF9-B29A-7576-6E3B-C78F7B94CEA1" localFKIndex="340FB37F-2CBC-1246-BB81-1D0FD85BA62A" name="INVESTIMENTO_CONTA_FK">
+<createdBy>vvv</createdBy>
+<createdTime>2024-09-30 13:55:37 UTC</createdTime>
+<ownerDesignName>modelo_logico_fintech</ownerDesignName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>C1DC651A-6873-EE08-2218-386E6D90827F</referredTableID>
+<keyObject>12D6D47B-8213-EC2E-17FB-FB528D4AAFD3</keyObject>
+<referredKeyID>12D6D47B-8213-EC2E-17FB-FB528D4AAFD3</referredKeyID>
+<mandatory>true</mandatory>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

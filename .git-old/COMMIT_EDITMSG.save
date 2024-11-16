@@ -1,0 +1,54 @@
+kkkk
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# No ramo main
+# Your branch is up to date with 'origin/main'.
+#
+# Mudanças a serem submetidas:
+#	new file:   java/aulas/.vscode/settings.json
+#	deleted:    java/aulas/aulas/out/production/aulas/.idea/.gitignore
+#	deleted:    java/aulas/aulas/out/production/aulas/.idea/aulas.iml
+#	deleted:    java/aulas/aulas/out/production/aulas/.idea/misc.xml
+#	deleted:    java/aulas/aulas/out/production/aulas/.idea/modules.xml
+#	deleted:    java/aulas/aulas/out/production/aulas/.idea/vcs.xml
+#	renamed:    java/aulas/aulas/Ex01.java -> java/aulas/exercicios/Ex01.java
+#	renamed:    java/aulas/aulas/Ex02.java -> java/aulas/exercicios/Ex02.java
+#	renamed:    java/aulas/aulas/Ex03.java -> java/aulas/exercicios/Ex03.java
+#	renamed:    java/aulas/aulas/Ex04.java -> java/aulas/exercicios/Ex04.java
+#	renamed:    java/aulas/aulas/Ex05.java -> java/aulas/exercicios/Ex05.java
+#	renamed:    java/aulas/aulas/Ex06.java -> java/aulas/exercicios/Ex06.java
+#	renamed:    java/aulas/aulas/Ex07.java -> java/aulas/exercicios/Ex07.java
+#	renamed:    java/aulas/aulas/Ex08.java -> java/aulas/exercicios/Ex08.java
+#	renamed:    java/aulas/aulas/Ex09.java -> java/aulas/exercicios/Ex09.java
+#	renamed:    java/aulas/aulas/Ex10.java -> java/aulas/exercicios/Ex10.java
+#	renamed:    java/aulas/aulas/Ex11.java -> java/aulas/exercicios/Ex11.java
+#	renamed:    java/aulas/aulas/Ex12.java -> java/aulas/exercicios/Ex12.java
+#	new file:   java/aulas/exercicios/Ex13.java
+#	new file:   java/aulas/exercicios/Ex14.java
+#	deleted:    java/aulas/exercicios/P03/.gitignore
+#	deleted:    java/aulas/exercicios/P03/.idea/.gitignore
+#	deleted:    java/aulas/exercicios/P03/.idea/misc.xml
+#	deleted:    java/aulas/exercicios/P03/.idea/modules.xml
+#	deleted:    java/aulas/exercicios/P03/.idea/vcs.xml
+#	deleted:    java/aulas/exercicios/P03/P03.iml
+#	deleted:    java/aulas/exercicios/P03/src/Main.java
+#	renamed:    java/aulas/aulas/out/Ex02.java -> java/aulas/exercicios/out/Ex02.java
+#	renamed:    java/aulas/aulas/.idea/.gitignore -> java/aulas/exercicios/out/production/aulas/.idea/.gitignore
+#	renamed:    java/aulas/aulas/.idea/aulas.iml -> java/aulas/exercicios/out/production/aulas/.idea/aulas.iml
+#	renamed:    java/aulas/aulas/.idea/misc.xml -> java/aulas/exercicios/out/production/aulas/.idea/misc.xml
+#	renamed:    java/aulas/aulas/.idea/modules.xml -> java/aulas/exercicios/out/production/aulas/.idea/modules.xml
+#	renamed:    java/aulas/aulas/.idea/vcs.xml -> java/aulas/exercicios/out/production/aulas/.idea/vcs.xml
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex01.class -> java/aulas/exercicios/out/production/aulas/Ex01.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex02.class -> java/aulas/exercicios/out/production/aulas/Ex02.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex03.class -> java/aulas/exercicios/out/production/aulas/Ex03.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex04.class -> java/aulas/exercicios/out/production/aulas/Ex04.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex05.class -> java/aulas/exercicios/out/production/aulas/Ex05.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex06.class -> java/aulas/exercicios/out/production/aulas/Ex06.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex07.class -> java/aulas/exercicios/out/production/aulas/Ex07.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex08.class -> java/aulas/exercicios/out/production/aulas/Ex08.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex09.class -> java/aulas/exercicios/out/production/aulas/Ex09.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex10.class -> java/aulas/exercicios/out/production/aulas/Ex10.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex11.class -> java/aulas/exercicios/out/production/aulas/Ex11.class
+#	renamed:    java/aulas/aulas/out/production/aulas/Ex12.class -> java/aulas/exercicios/out/production/aulas/Ex12.class
+#

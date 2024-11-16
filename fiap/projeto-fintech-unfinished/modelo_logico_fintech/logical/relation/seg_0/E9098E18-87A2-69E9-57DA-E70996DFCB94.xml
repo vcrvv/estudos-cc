@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="INVESTIMENTO_CONTA_FK" directorySegmentName="seg_0" id="E9098E18-87A2-69E9-57DA-E70996DFCB94">
+<createdBy>vvv</createdBy>
+<createdTime>2024-09-30 19:11:58 UTC</createdTime>
+<generatorID>576705C6-B8DE-65E8-DCD4-339DEB4D47AF</generatorID>
+<ownerDesignName>modelo_logico_fintech</ownerDesignName>
+<engineerTo>
+<item key="CB7A0551-5DBE-CA59-E8AD-BBD67F679CBD" value="true"/>
+</engineerTo>
+<sourcePk>C138ABE3-778B-C89C-CA54-CE31F9FF7032</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>D85FC001-99B1-7C12-9F8A-CDAD466F5A7D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>24A62C3A-1189-1E97-D772-C2825ECBD6DA</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

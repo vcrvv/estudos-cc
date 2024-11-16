@@ -1,0 +1,7 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="53C9A089-B7F8-26C0-3D2C-43C801BBDA76" mainViewID="630B9059-2A56-0FB8-5E97-CD133D40A414">
+<createdBy>arcne</createdBy>
+<createdTime>2024-04-30 17:10:10 UTC</createdTime>
+<ownerDesignName>fase3_cap7</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+</LogicalDesign>

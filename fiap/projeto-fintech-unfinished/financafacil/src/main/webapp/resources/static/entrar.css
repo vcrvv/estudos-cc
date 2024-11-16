@@ -1,0 +1,93 @@
+@import url("/usr/share/fonts/roboto/stylesheet.css");
+
+:root {
+    --cor1: #6471B2;
+    --cor2: #726F6F;
+    --cor3: #F4F4F4;
+    --cor4: #84E8AC;
+    --cor5: #E88484;
+    --cor6: #FBF8F8;
+}
+
+* {
+    font-family: 'iFood RC Textos', sans-serif;
+}
+
+html, body {
+    font-size: 14px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f9fb;
+}
+
+form {
+    margin-top: 16px;
+    margin-bottom: 10px;
+}
+
+.card.fat {
+    padding: 40px;
+    width: 400px;
+    border-color: transparent;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.card-title {
+    color: var(--cor1);
+}
+
+.card-body  p {
+    color: #3E3E3E;
+}
+
+.form-group-sm label {
+    width: 100%;
+} 
+
+.form-group-sm .form-control {
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    margin-top: 2px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 38px;
+}
+
+.btn.btn-block {
+    width: 100%;
+    color: white;
+    background-color: var(--cor1);
+    font-weight: bold;
+    font-size: large;
+    border: none;
+    height: 45px;
+}
+
+.btn.btn-block:hover {
+    background-color: #6f7ab3;
+}
+
+.alert {
+    margin: 16px 0 0 0;
+    width: fit-content;
+    padding: 6px;
+}
+
+@media screen and (max-width: 425px) {
+    .card-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .card.fat {
+        padding: 0;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+}
