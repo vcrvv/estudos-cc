@@ -1,0 +1,193 @@
+@import url("/usr/share/fonts/roboto/stylesheet.css");
+
+:root {
+    --cor1: #6471B2;
+    --cor2: #726F6F;
+    --cor3: #F4F4F4;
+    --cor4: #84E8AC;
+    --cor5: #E88484;
+    --cor6: #FBF8F8;
+    --cor7: #6f7ab3;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'iFood RC Textos', sans-serif;
+}
+
+body {
+    font-size: 14px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f7f9fb;
+}
+
+.container {
+    justify-content: center;
+    display: flex;
+    max-width: 840px;
+}
+
+.formulario {
+    border-radius: 6px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+.formulario header{
+    position: relative;
+}
+
+.card-title {
+    color: var(--cor1);
+}
+
+.card-body  p {
+    color: #3E3E3E;
+}
+
+.container form {    
+    position: relative;
+    margin-top: 16px;
+    min-height: 368px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.container form .form {
+    position: absolute;
+    background-color: #fff;
+}
+
+.container form .form.second {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(100%);
+}
+
+form.secActive .form.second {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+form.secActive .form.first {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-100%);
+}
+
+.container form .title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 6px 0;
+    color: #333;
+}
+
+.container form .fields {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    margin: 4px 14px 4px 0px;
+    width: 48%;
+}
+
+
+.input-field input, select {
+    outline: none;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    border-radius: 5px;
+    border: 1px solid #aaa;
+    padding: 0 15px;
+    height: 39px;
+    margin: 2px 0px 4px 0px;
+}
+
+.input-field input :focus, .input-field select:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.input-field select, .input-field input[type="date"]{
+    color: #707070;
+}
+
+.input-field input[type="date"]:valid{
+    color: #333;
+} 
+
+.container form button, .backBtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    margin: 25px 0;
+    background-color: var(--cor1);
+    
+}
+
+.container form .btnText{
+    font-weight: bold;
+    font-size: large;
+}
+
+form button:hover{
+    background-color: var(--cor7);
+}
+
+form button i, form .backBtn i{
+    margin: 0 6px;
+}
+
+form .backBtn i{
+    transform: rotate(180deg);
+}
+
+form .buttons{
+    display: flex;
+    align-items: center;
+}
+
+form .buttons button , .backBtn{
+    margin-right: 14px;
+}
+
+@media (max-width: 750px) {
+    .container form{
+        overflow-y: scroll;
+    }
+    .container form::-webkit-scrollbar{
+       display: none;
+    }
+    form .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}
+
+@media (max-width: 550px) {
+    form .fields .input-field{
+        width: 100%;
+    }
+}
+

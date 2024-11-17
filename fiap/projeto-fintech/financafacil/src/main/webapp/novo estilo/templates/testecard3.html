@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <title>Finanças e Histórico de Transações</title>
+    <style>
+        .container {
+            max-width: 720px;
+        }
+        .cartao-transacao {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 16px 26px;
+            margin: 10px 0;
+        }
+        .categoria {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .valor {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .data-hora {
+            font-size: small;
+        }
+        .cartao-financas {
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f8f9fa;
+            margin-bottom: 20px;
+        }
+        .etiqueta {
+            font-size: 0.9rem;
+            color: #6c757d;
+        }
+        .container-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .coluna-flex {
+            display: flex;
+            flex-direction: column;
+        }
+        .informacoes-transacao {
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start; 
+        }
+        @media (max-width: 768px) {
+            .valor, .categoria {
+                font-size: 1.3rem; 
+            }
+            .informacoes-transacao span {
+                font-size: 0.9rem; 
+            }
+            h2 {
+                font-size: 1.75rem;
+            }
+        }
+        @media (max-width: 576px) {
+            .etiqueta {
+                font-size: 0.8rem;
+            }
+            .valor, .categoria {
+                font-size: 1.2rem;
+            }
+            .informacoes-transacao span {
+                font-size: 0.8rem; 
+            }
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Cartão de Finanças</h2>
+    <div class="card cartao-financas">
+        <div class="container-flex">
+            <div class="coluna-flex" style="text-align: center;">
+                <div class="etiqueta">Saldo</div>
+                <div class="valor">R$ 1.500,00</div>
+            </div>
+            <div class="coluna-flex" style="text-align: center;">
+                <div class="etiqueta">Entradas</div>
+                <div class="valor">R$ 2.000,00</div>
+            </div>
+            <div class="coluna-flex" style="text-align: center;">
+                <div class="etiqueta">Saídas</div>
+                <div class="valor">R$ 500,00</div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Histórico de Transações</h2>
+    <div class="card cartao-transacao">
+        <div class="container-flex">
+            <div class="coluna-flex">
+                <div class="categoria">Alimentação</div>
+                <div class="informacoes-transacao">
+                    <span>Saída - Cartão de Crédito</span>
+                </div>
+            </div>
+            <div class="coluna-flex" style="text-align: right;">
+                <div class="valor">R$ 500,00</div>
+                <div class="data-hora">01/11/2024 14:30</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card cartao-transacao">
+        <div class="container-flex">
+            <div class="coluna-flex" >
+                <div class="categoria">Salário</div>
+                <div class="informacoes-transacao">
+                    <span>Entrada - Transferência</span>
+                </div>
+            </div>
+            <div class="coluna-flex" style="text-align: right;">
+                <div class="valor">R$ 2000,00</div>
+                <div class="data-hora">01/11/2024 10:00</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

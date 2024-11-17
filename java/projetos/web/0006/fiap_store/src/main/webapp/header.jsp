@@ -32,6 +32,7 @@
                 <form class="form-inline my-lg-0" action="login" method="post">
                     <div class="row">
                         <div class="col">
+<<<<<<< HEAD
                             <input class="form-control mr-sm-2" type="text" name="email" placeholder="E-mail">
                         </div>
                         <div class="col">
@@ -40,6 +41,24 @@
                         <div class="col">
                             <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
                                 Entrar
+=======
+                            <input
+                                    class="form-control mr-sm-2"
+                                    type="text"
+                                    name="email"
+                                    placeholder="E-mail">
+                        </div>
+                        <div class="col">
+                            <input
+                                    class="form-control mr-sm-2"
+                                    type="password"
+                                    name="senha"
+                                    placeholder="Senha">
+                        </div>
+                        <div class="col">
+                            <button class="btn btn-outline-success my-2 my-sm-0"
+                                    type="submit">Entrar
+>>>>>>> origin/main
                             </button>
                         </div>
                     </div>

@@ -34,7 +34,13 @@
             </c:if>
 
             <div class="card-body">
+<<<<<<< HEAD
                 <form action="produtos" method="post">
+=======
+                <form
+                        action="produtos"
+                        method="post">
+>>>>>>> origin/main
 
                     <input
                             type="hidden"
@@ -72,6 +78,7 @@
                         >
                     </div>
                     <div class="form-group">
+<<<<<<< HEAD
                         <label for="id-quantidade">Quantidade</label>
                         <input type="text" name="quantidade" id="id-quantidade" class="form-control" value="${produto.quantidade}">
                     </div>
@@ -95,6 +102,53 @@
                     </div>
                     <input type="submit" value="Salvar" class="btn btn-primary mt-3">
                     <a href="produtos?acao=listar" class="btn btn-warning mt-3">Cancelar</a>
+=======
+                        <label
+                                for="id-quantidade">Quantidade
+                        </label>
+                        <input
+                                type="text"
+                                name="quantidade"
+                                id="id-quantidade"
+                                class="form-control"
+                                value="${produto.quantidade}"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label
+                                for="id-fabricacao">Data de Fabricação
+                        </label>
+                        <input
+                                type="date"
+                                name="fabricacao"
+                                id="id-fabricacao"
+                                class="form-control"
+                                value="${produto.dataFabricacao}"
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="id-categoria">Categoria</label>
+                        <select name="categoria" id="id-categoria" class="form-control">
+                            <option value="0">Selecione</option>
+                            <c:forEach items="${ categorias }" var="c">
+                                <c:if test="${ c.codigo == produto.categoria.codigo }">
+                                    <option value="${ c.codigo }" selected>${ c.nome }</option>
+                                </c:if>
+                                <c:if test="${ c.codigo != produto.categoria.codigo }">
+                                    <option value="${ c.codigo }">${ c.nome }</option>
+                                </c:if>
+                            </c:forEach>
+                        </select>
+                    </div>
+                    <input
+                            type="submit"
+                            value="Salvar"
+                            class="btn btn-primary mt-3">
+                    <a
+                            href="produtos?acao=listar"
+                            class="btn btn-warning mt-3">Cancelar
+                    </a>
+>>>>>>> origin/main
                 </form>
             </div>
         </div>

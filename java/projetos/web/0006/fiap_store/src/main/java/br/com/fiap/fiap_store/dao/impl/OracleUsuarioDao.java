@@ -18,7 +18,13 @@ public class OracleUsuarioDao implements UsuarioDao {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try {
+<<<<<<< HEAD
             conexao = ConnectionManager.getInstance().getConnection();
+=======
+            conexao = ConnectionManager
+                    .getInstance()
+                    .getConnection();
+>>>>>>> origin/main
 
             String sql = "SELECT * FROM TB_USUARIO " +
                     "WHERE DS_EMAIL = ? AND DS_SENHA = ?";
