@@ -1,0 +1,59 @@
+1. Sistema de Gestão de Tarefas
+
+    Descrição: Um aplicativo para gerenciar tarefas diárias, com funcionalidades para adicionar, editar, marcar como concluídas e excluir tarefas.
+    Funcionalidades: Autenticação de usuários, categorização de tarefas, filtros e buscas, lembretes de tarefas.
+    Tecnologias: Django, PostgreSQL/MySQL, Bootstrap.
+
+2. Blog Pessoal
+
+    Descrição: Uma plataforma para criar e gerenciar posts de blog, com suporte para comentários e categorias.
+    Funcionalidades: Criação, edição e exclusão de posts, comentários, tags, e categorias.
+    Tecnologias: Django, SQLite/PostgreSQL, CKEditor para edição de texto.
+
+3. E-commerce Simples
+
+    Descrição: Um sistema de e-commerce básico para listar produtos, gerenciar carrinho de compras e processar pagamentos.
+    Funcionalidades: Catálogo de produtos, carrinho de compras, checkout, e histórico de pedidos.
+    Tecnologias: Django, Stripe/PayPal para pagamentos, PostgreSQL.
+
+4. Plataforma de Gerenciamento de Eventos
+
+    Descrição: Aplicativo para criar, gerenciar e participar de eventos.
+    Funcionalidades: Criação de eventos, inscrição, gerenciamento de participantes, notificações por e-mail.
+    Tecnologias: Django, Celery para tarefas assíncronas, PostgreSQL.
+
+5. Aplicativo de Rede Social
+
+    Descrição: Uma rede social onde os usuários podem criar perfis, adicionar amigos, postar atualizações e interagir com outros usuários.
+    Funcionalidades: Perfis de usuário, feed de notícias, amigos, mensagens privadas, notificações.
+    Tecnologias: Django, Django REST Framework para API, Redis para cache.
+
+6. Sistema de Reservas para Restaurantes
+
+    Descrição: Aplicativo para reservas em restaurantes, com funcionalidades para gestão de mesas e horários.
+    Funcionalidades: Reserva de mesas, visualização de disponibilidade, gerenciamento de reservas e notificações.
+    Tecnologias: Django, PostgreSQL, Bootstrap.
+
+7. Dashboard de Análise de Dados
+
+    Descrição: Um painel para visualizar e analisar dados, com gráficos e relatórios.
+    Funcionalidades: Importação de dados, geração de gráficos interativos, filtros e relatórios.
+    Tecnologias: Django, Pandas para manipulação de dados, D3.js ou Chart.js para visualizações.
+
+8. Aplicativo de Compartilhamento de Fotos
+
+    Descrição: Plataforma para upload, compartilhamento e organização de fotos.
+    Funcionalidades: Upload de fotos, criação de álbuns, compartilhamento e comentários.
+    Tecnologias: Django, Amazon S3 para armazenamento de arquivos, Pillow para manipulação de imagens.
+
+9. Sistema de Feedback e Avaliação
+
+    Descrição: Sistema para coletar feedback e avaliações sobre produtos ou serviços.
+    Funcionalidades: Envio de avaliações, visualização de médias e comentários, painel de administração.
+    Tecnologias: Django, Django REST Framework para API, PostgreSQL.
+
+10. 
+
+    Descrição: Ferramenta para acompanhar e gerenciar suas finanças pessoais.
+    Funcionalidades: Registro de receitas e despesas, categorização de transações, relatórios financeiros.
+    Tecnologias: Django, SQLite/PostgreSQL, gráficos com Chart.js.
