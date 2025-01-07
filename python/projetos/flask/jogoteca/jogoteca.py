@@ -3,6 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf.csrf import CSRFProtect
 from flask_bcrypt import Bcrypt
 
+# flask --app joteca  run --debug
+
 app = Flask(__name__)
 app.config.from_pyfile('config.py')
 

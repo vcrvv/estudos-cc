@@ -13,8 +13,6 @@ def index():
 
 @app.route('/novo')
 def novo():
-    if 'usuario_logado' not in session or session['usuario_logado'] is None:
-        return redirect(url_for('login', proxima=url_for('novo')))
     form = FormularioJogo()
     return render_template('novo.html', titulo='Novo Jogo', form=form)
 
@@ -50,10 +48,7 @@ def criar():
 
 @app.route('/editar/<int:id>')
 def editar(id):
-    if 'usuario_logado' not in session or session['usuario_logado'] == None:
-        return redirect(url_for('login', proxima=url_for('editar', id=id)))
     jogo = Jogos.query.filter_by(id=id).first()
-    
     form = FormularioJogo()
     form.nome.data = jogo.nome
     form.categoria.data = jogo.categoria
@@ -65,7 +60,6 @@ def editar(id):
 
 @app.route('/atualizar', methods=['POST',])
 def atualizar():
-    
     form = FormularioJogo(request.form)
     
     if form.validate_on_submit():
@@ -88,13 +82,10 @@ def atualizar():
 
 @app.route('/deletar/<int:id>')
 def deletar(id):
-    if 'usuario_logado' not in session or session['usuario_logado'] is None:
-        return redirect(url_for('login'))
     Jogos.query.filter_by(id=id).delete()
     db.session.commit()
     flash('Jogo deletado com sucesso!')
     return redirect(url_for('index'))
-
 
 
 @app.route('/uploads/<nome_arquivo>')

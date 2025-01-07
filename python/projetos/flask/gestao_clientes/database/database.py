@@ -1,8 +1,12 @@
-from peewee import SqliteDatabase
+from peewee import SqliteDatabase, MySQLDatabase
 
-db = SqliteDatabase('customermanager.db')
+sqlitedb = SqliteDatabase('customermanager.db')
 
-
+db = MySQLDatabase(user='root', 
+                   password='root', 
+                   host='localhost', 
+                   port=3306,
+                   database='mydb7')
 
 # Connect to a MySQL database on network.
 # mysql_db = MySQLDatabase('my_app', user='app', password='db_password',

@@ -57,3 +57,10 @@
     Descrição: Ferramenta para acompanhar e gerenciar suas finanças pessoais.
     Funcionalidades: Registro de receitas e despesas, categorização de transações, relatórios financeiros.
     Tecnologias: Django, SQLite/PostgreSQL, gráficos com Chart.js.
+
+11. Web Chat
+
+    Descricão: Sistema de troca de mensagens estantaneas.
+    Funcionalidades: Procurar e adicionar usuarios, troca de texto e midia, criação e personalizaçao de
+    usuario.
+    Tecnologias: 
