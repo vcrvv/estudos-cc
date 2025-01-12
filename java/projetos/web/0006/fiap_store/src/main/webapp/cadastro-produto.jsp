@@ -29,13 +29,7 @@
             </c:if>
 
             <div class="card-body">
-<<<<<<< HEAD
                 <form action="produtos?acao=cadastrar" method="post">
-=======
-                <form
-                        action="produtos?acao=cadastrar"
-                        method="post">
->>>>>>> origin/main
                     <div class="form-group">
                         <label for="id-nome">Nome</label>
                         <input type="text" name="nome" id="id-nome" class="form-control">
