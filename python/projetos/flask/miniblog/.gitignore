@@ -1,4 +1,0 @@
-*.pyc
-.venv
-__pycache__
-db_queries.txt
