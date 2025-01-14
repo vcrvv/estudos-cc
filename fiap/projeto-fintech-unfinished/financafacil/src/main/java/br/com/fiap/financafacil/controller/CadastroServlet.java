@@ -49,10 +49,10 @@ public class CadastroServlet extends HttpServlet {
             try (UsuarioDao usuarioDao = new UsuarioDao()) {
                 usuarioDao.insert(usuario);
 
-                ContaDao contaDao = new ContaDao();
-                Conta conta = new Conta(usuario.getIdUsuario(), 0.0);
-                contaDao.insert(conta);
-
+                try (ContaDao contaDao = new ContaDao()) {
+                    Conta conta = new Conta(usuario.getIdUsuario(), 0.0);
+                    contaDao.insert(conta);
+                }
                 request.setAttribute("sucesso", "Cadastro realizado com sucesso!");
                 request.getRequestDispatcher("cadastro.jsp").forward(request, response);
             } catch (SQLException e) {

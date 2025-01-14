@@ -1,5 +1,6 @@
 package br.com.fiap.fiap_store.model;
 
+import java.sql.Date;
 import java.time.LocalDate;
 
 public class Produto {
@@ -11,7 +12,7 @@ public class Produto {
     private int quantidade;
     private Categoria categoria;
 
-    public Produto(){
+    public Produto(int codigo2, String nome2, double valor2, Date data, LocalDate dataFabricacao2, int qtd){
 
     }
 

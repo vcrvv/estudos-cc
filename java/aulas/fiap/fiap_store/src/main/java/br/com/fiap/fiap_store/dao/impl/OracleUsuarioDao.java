@@ -1,37 +1,37 @@
 package br.com.fiap.fiap_store.dao.impl;
 
-import br.com.fiap.fiap_store.dao.CategoriaDao;
 import br.com.fiap.fiap_store.dao.ConnectionManager;
-import br.com.fiap.fiap_store.model.Categoria;
+import br.com.fiap.fiap_store.dao.UsuarioDao;
+import br.com.fiap.fiap_store.model.Usuario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
-public class OracleCategoriaDao implements CategoriaDao {
+public class OracleUsuarioDao implements UsuarioDao {
 
     private Connection conexao;
 
     @Override
-    public List<Categoria> listar() {
-        List<Categoria> lista = new ArrayList<Categoria>();
+    public boolean validarUsuario(Usuario usuario) {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try {
             conexao = ConnectionManager.getInstance().getConnection();
-            stmt = conexao.prepareStatement("SELECT * FROM TB_CATEGORIA");
+
+            String sql = "SELECT * FROM TB_USUARIO " +
+                    "WHERE DS_EMAIL = ? AND DS_SENHA = ?";
+
+            stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, usuario.getEmail());
+            stmt.setString(2, usuario.getSenha());
             rs = stmt.executeQuery();
 
-            //Percorre todos os registros encontrados
-            while (rs.next()) {
-                int codigo = rs.getInt("COD_CATEGORIA");
-                String nome = rs.getString("NOME_CATEGORIA");
-                Categoria categoria = new Categoria(codigo, nome);
-                lista.add(categoria);
+            if (rs.next()) {
+                return true;
             }
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -43,6 +43,6 @@ public class OracleCategoriaDao implements CategoriaDao {
                 e.printStackTrace();
             }
         }
-        return lista;
+        return false;
     }
 }

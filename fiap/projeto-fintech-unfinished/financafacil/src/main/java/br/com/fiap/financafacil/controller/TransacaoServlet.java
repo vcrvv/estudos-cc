@@ -71,16 +71,6 @@ public class TransacaoServlet extends HttpServlet {
         }
     }
 
-    private void listar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            List<Transacao> transacoes = transacaoService.listarTransacoes();
-            request.setAttribute("transacao", transacoes);
-            request.getRequestDispatcher("transacoes.jsp").forward(request, response);
-        } catch (SQLException e) {
-            throw new ServletException("Erro ao listar transações.", e);
-        }
-    }
-
     private void editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int idTransacao = Integer.parseInt(request.getParameter("id"));
         try {

@@ -131,7 +131,7 @@ public class OracleProdutoDao implements ProdutoDao {
             stmt.setInt(1, id);
             rs = stmt.executeQuery();
 
-            if (rs.next()){
+            if (rs.next()) {
                 int codigo = rs.getInt("COD_PRODUTO");
                 String nome = rs.getString("NOME_PRODUTO");
                 int qtd = rs.getInt("QTDE_PRODUTO");
@@ -142,17 +142,15 @@ public class OracleProdutoDao implements ProdutoDao {
                 String nomeCategoria = rs.getString("NOME_CATEGORIA");
 
                 produto = new Produto(
-                        codigo, nome, valor, data, qtd
-                );
+                        codigo, nome, valor, data, qtd);
                 Categoria categoria = new Categoria(
-                        codigoCategoria, nomeCategoria
-                );
+                        codigoCategoria, nomeCategoria);
                 produto.setCategoria(categoria);
             }
 
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 stmt.close();
                 rs.close();
@@ -179,25 +177,20 @@ public class OracleProdutoDao implements ProdutoDao {
             stmt = conexao.prepareStatement(sql);
             rs = stmt.executeQuery();
 
-            //Percorre todos os registros encontrados
+            // Percorre todos os registros encontrados
             while (rs.next()) {
                 int codigo = rs.getInt("COD_PRODUTO");
                 String nome = rs.getString("NOME_PRODUTO");
                 int qtd = rs.getInt("QTDE_PRODUTO");
                 double valor = rs.getDouble("VALOR_PRODUTO");
                 java.sql.Date data = rs.getDate("DATA_FABRICACAO");
-                LocalDate dataFabricacao = rs.getDate("DATA_FABRICACAO")
-                        .toLocalDate();
+                LocalDate dataFabricacao = rs.getDate("DATA_FABRICACAO").toLocalDate();
                 int codigoCategoria = rs.getInt("COD_CATEGORIA");
                 String nomeCategoria = rs.getString("NOME_CATEGORIA");
 
-                Produto produto = new Produto(
-                        codigo, nome, valor, dataFabricacao, qtd
-                );
+                Produto produto = new Produto(codigo, nome, valor, data, dataFabricacao, qtd);
 
-                Categoria categoria = new Categoria(
-                        codigoCategoria, nomeCategoria
-                );
+                Categoria categoria = new Categoria(codigoCategoria, nomeCategoria);
                 produto.setCategoria(categoria);
 
                 lista.add(produto);
@@ -205,7 +198,7 @@ public class OracleProdutoDao implements ProdutoDao {
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 stmt.close();
                 rs.close();

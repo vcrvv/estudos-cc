@@ -1,46 +1,40 @@
 package br.com.fiap.fiap_store.dao.impl;
 
+import br.com.fiap.fiap_store.dao.CategoriaDao;
 import br.com.fiap.fiap_store.dao.ConnectionManager;
-import br.com.fiap.fiap_store.dao.UsuarioDao;
-import br.com.fiap.fiap_store.model.Usuario;
+import br.com.fiap.fiap_store.model.Categoria;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
-public class OracleUsuarioDao implements UsuarioDao {
+public class OracleCategoriaDao implements CategoriaDao {
 
     private Connection conexao;
 
     @Override
-    public boolean validarUsuario(Usuario usuario) {
+    public List<Categoria> listar() {
+        List<Categoria> lista = new ArrayList<Categoria>();
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try {
-<<<<<<< HEAD
             conexao = ConnectionManager.getInstance().getConnection();
-=======
-            conexao = ConnectionManager
-                    .getInstance()
-                    .getConnection();
->>>>>>> origin/main
-
-            String sql = "SELECT * FROM TB_USUARIO " +
-                    "WHERE DS_EMAIL = ? AND DS_SENHA = ?";
-
-            stmt = conexao.prepareStatement(sql);
-            stmt.setString(1, usuario.getEmail());
-            stmt.setString(2, usuario.getSenha());
+            stmt = conexao.prepareStatement("SELECT * FROM TB_CATEGORIA");
             rs = stmt.executeQuery();
 
-            if (rs.next()){
-                return true;
+            // Percorre todos os registros encontrados
+            while (rs.next()) {
+                int codigo = rs.getInt("COD_CATEGORIA");
+                String nome = rs.getString("NOME_CATEGORIA");
+                Categoria categoria = new Categoria(codigo, nome);
+                lista.add(categoria);
             }
-
         } catch (SQLException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 stmt.close();
                 rs.close();
@@ -49,6 +43,6 @@ public class OracleUsuarioDao implements UsuarioDao {
                 e.printStackTrace();
             }
         }
-        return false;
+        return lista;
     }
 }
