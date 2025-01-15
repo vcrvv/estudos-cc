@@ -1,0 +1,22 @@
+* {
+  margin: 0px;
+}
+
+body {
+  text-align: center;
+}
+
+#tarefas {
+  display: flex;
+  justify-content: center;
+}
+
+.task {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.table {
+  width: fit-content;
+}
