@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <h1>Pagina Inicial</h1>
+    <h3>Sistema de Cadastro e Login com Flask</h3>
+    <p>Em Construção........</p>
+
+    {% if session['username'] %}
+        <p>Olá, {{ session['username'] }} :)</p>
+        <a href="/logout">Sair</a>
+    {% else %}
+        <p>Nenhum usuario logado. :/</p>
+        <a href="/login">Entrar</a>
+        <a href="/register">Cadastrar</a>   
+    {% endif %}
+
+    
+</body>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="conecta-banco" />
+        <module name="teste01" />
+        <module name="base-jsp-servlet" />
+        <module name="fiap_store" />
+        <module name="frameworks" />
+        <module name="untitled000" />
+        <module name="aula3" />
+        <module name="demo_com_estilo" />
+        <module name="demo" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
