@@ -2,8 +2,6 @@ from flask import request, session, render_template, redirect, url_for, flash
 from main import app, db, bc
 from models import User 
 
-# Criar um auth_routes separado para atenticações
-# redefinir senha com email codigo enviado por email
 
 @app.route('/', methods=['GET'])
 def home():
