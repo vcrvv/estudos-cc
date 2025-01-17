@@ -4,32 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
-<body>
-    <div class="form-container">
-        <h2>Criar uma Conta</h2>
+<body class="auth-page">
+    <div class="auth-container">
+        <h1>Cadastrar</h1>
         <form id="signupForm" method="post">
             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
-            <div class="form-group">
-                <label for="signupUsername">Usuário:</label>
-                <input type="text" id="signupUsername" name="username" required>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="signupUsername" name="username" placeholder="Usuário" required>
+                <label for="signupUsername">Usuário</label>
             </div>
-            <div class="form-group">
-                <label for="signupEmail">Email:</label>
-                <input type="email" id="signupEmail" name="email" required>
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="signupEmail" name="email" placeholder="examplo@email.com" required>
+                <label for="signupEmail">Email</label>
             </div>
-            <div class="form-group">
-                <label for="signupPassword">Senha:</label>
-                <input type="password" id="signupPassword" name="password" required>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="signupPassword" name="password" placeholder="Senha" required>
+                <label for="signupPassword">Senha</label>
             </div>
-            <div class="form-group">
-                <label for="confirmPassword">Confirmar Senha:</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirmar Senha" required>
+                <label for="confirmPassword">Confirmar Senha</label>
             </div>
-            <button type="submit">Cadastrar</button>
-            
-            <p>Ja possui uma conta? <a href="/login">Entrar</a></p>
+            <button type="submit" class="btn btn-primary w-100 mb-3">Cadastrar</button>
+            <p class="text-center">Já possui uma conta? <a href="/login">Entrar</a></p>
         </form>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for  message in messages %}
+                    <div class="alert alert-danger">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
