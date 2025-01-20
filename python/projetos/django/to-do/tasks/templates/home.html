@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <title>To-Do</title>
+</head>
+<body>
+    <header>
+        <h1>To-Do App com Django</h1>
+    </header>
+    <main>
+        <h2>Adicionar Tarefa</h2>
+        <form method="post">
+            {% csrf_token %}
+            <label for="title">Tarefa</label>
+            <input type="text" name="title" id="title">
+            
+            <input type="submit" value="Adicionar">
+        </form>
+        
+        <h2>Tarefas</h2>
+        <div class="task-list">
+            {% for task in tasks %}
+            <div class="task-item">
+                <h3>{{ task.title }}</h3>
+                {% if task.completed %}
+                <p>terefa concluída</p>
+                {% else %}
+                <p>terefa pendente</p>
+                {% endif %}
+                
+                <a href="{% url 'update' task.id %}">Atualizar</a>
+                <a href="{% url 'delete' task.id %}">Deletar</a>
+            </div>
+            {% empty %}
+            <p>Não há tarefas ainda.</p>
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>

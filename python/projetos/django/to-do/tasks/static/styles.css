@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.task-item {
+    margin: 10px 0;
+    border-radius: 8px;
+}
+
+.task-item h3 {
+    margin: 0;
+}
+
+.task-item p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.task-item a {
+    margin-right: 15px;
+    text-decoration: none;
+}
+
+.task-item a:hover {
+    text-decoration: underline;
+}
