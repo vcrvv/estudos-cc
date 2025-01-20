@@ -50,13 +50,6 @@ REDE:
 7 - Application - HTTP, SMTP
 -------------------------------------
 
-sudo service apache2 start/stop = servidor apache
-python3 -m http.server 80 - servidor python
-sudo systemctl enable ssh - iniciar servidor quando a maquina iniciar
-
-sudo apt update && apt upgrade - atualizar ferramentas
-
-
 NMAP//
 nmap -T4(velocidade) -p-(todas as portas) -A(tudo) {IP} = escanear rede
 nmap -sT {IP} 
