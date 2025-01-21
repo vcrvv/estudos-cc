@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        {{ form1.as_p }}
+        <button type="submit">Criar</button>
+    </form>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form2.as_table }}
+        <button type="submit">Criar</button>
+    </form>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        {{ form2.as_p }}
+        <button type="submit">Criar</button>
+    </form>
+    <br>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            <label for="{{ form2.username.id_for_label }}">Usuario:</label>
+            {{ form2.username }}
+        </div>
+        <div>
+            <label for="{{ form2.email.id_for_label }}">Email:</label>
+            {{ form2.email }}
+        </div>
+    
+        <button type="submit">Enviar</button>
+    </form>
+
+</body>
+</html>
