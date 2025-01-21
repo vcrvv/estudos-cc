@@ -13,5 +13,24 @@
 
         <button type="submit">Cadastrar</button>
     </form>
+    <p>Ja possui uma conta? <a href="{% url 'login' %}">Entrar</a></p>
+
+    {% if form.errors %}
+        <div class="errors">
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
 </body>
 </html>

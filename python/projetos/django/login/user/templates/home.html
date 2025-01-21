@@ -9,15 +9,14 @@
     <h1>App de Login e Cadastro com Django</h1>
     <h3>Em construção....</h3>
 
-    {% if user %}
-        <p>Olá, {{ user }} :)</p>
+    {% if request.session.username %}
+        <p>Olá, {{ request.session.username }} :)</p>
+        <a href="{% url 'logout' %}">Sair</a>
     {% else %}
         <p>Não há um usuario logado :/</p>
+        <a href="{% url 'login' %}">Entrar</a>
+        <a href="{% url 'register' %}">Cadastrar</a>
     {% endif %}
-
-    <a href="{% url 'logout' %}">Sair</a>
-    <a href="{% url 'login' %}">Entrar</a>
-    <a href="{% url 'register' %}">Cadastrar</a>
 
 </body>
 </html>

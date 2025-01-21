@@ -7,6 +7,31 @@
 </head>
 <body>
     <h1>Entra com uma conta</h1>
-    <p><form></p>    
+    <form method="post" >
+        {% csrf_token %}
+        {{ form.as_p }}
+    
+        <button type="submit">Entrar</button>
+    </form>
+    <p>Não possui uma conta? <a href="{% url 'register' %}">Cadastrar</a></p>
+
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if form.errors %}
+        <div class="errors">
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <p>{{ error }}</p>
+                {% endfor %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
 </body>
 </html>
